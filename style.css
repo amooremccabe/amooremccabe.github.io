@@ -11,4 +11,15 @@ body {background-color: #a7d4e8;}
 .headers {
 font-family: 'Didact Gothic', sans-serif;
 text-align: center;
+color: #00a172;
+
+}
+a:hover {
+  color: #00a172;
+}
+a {
+  color: #184a3c;
+}
+.current{
+
 }
