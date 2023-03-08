@@ -7,3 +7,8 @@ img {
 }
 
 body {background-color: #a7d4e8;}
+
+.headers {
+font-family: 'Didact Gothic', sans-serif;
+text-align: center;
+}
