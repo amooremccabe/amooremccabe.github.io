@@ -6,32 +6,53 @@ img {
   margin-right: auto;
 }
 
+
+
 body {
   background-color: #29465b;
 margin: 30px;
 font-family: 'Playfair Display', sans-serif;}
 
-a:hover {
-  color: #d47d31;
-}
-a {
-  color: #79a8c7;
-}
-.current{
 
-}
 
 .orange1 {
   color: #d47d31
 }
+a.orange1 {
+  color: #d47d31
+}
+
+
+.blue3 {
+  color: ##79a8c7;
+}
+a.blue3{
+  color: #79a8c7;
+}
+
 
 .yellow {
   color: #d4cd45
 }
+a.yellow {
+  color: #d4cd45
+}
+
 
 .green2 {
   color: #00a273
 }
+a.green2 {
+  color: #00a273
+}
+
+
+
+h1 a {
+  text-decoration: none;
+}
+
+
 
 ul {
   list-style: none; /* Remove default bullets */
