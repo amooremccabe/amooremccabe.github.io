@@ -6,20 +6,42 @@ img {
   margin-right: auto;
 }
 
-body {background-color: #a7d4e8;}
+body {
+  background-color: #29465b;
+margin: 30px;
+font-family: 'Playfair Display', sans-serif;}
 
-.headers {
-font-family: 'Didact Gothic', sans-serif;
-text-align: center;
-color: #00a172;
-
-}
 a:hover {
-  color: #00a172;
+  color: #d47d31;
 }
 a {
-  color: #184a3c;
+  color: #79a8c7;
 }
 .current{
 
+}
+
+.orange1 {
+  color: #d47d31
+}
+
+.yellow {
+  color: #d4cd45
+}
+
+.green2 {
+  color: #00a273
+}
+
+ul {
+  list-style: none; /* Remove default bullets */
+}
+
+ul li::before {
+  content: "\2022";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
+  color: #79a8c7; /* Change the color */
+  font-weight: bold; /* If you want it to be bold */
+  display: inline-block; /* Needed to add space between the bullet and the text */
+  width: 1em; /* Also needed for space (tweak if needed) */
+  margin-left: -1em; /* Also needed for space (tweak if needed) */
 }
