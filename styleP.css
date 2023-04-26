@@ -1,0 +1,73 @@
+img {
+  width: 50%;
+  height: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+
+body {
+  background-color: #000000;
+margin: 30px;
+font-family: 'Playfair Display', sans-serif;}
+
+
+
+.orange1 {
+  color: #d47d31
+}
+a.orange1 {
+  color: #d47d31
+}
+
+
+.blue3 {
+  color: #79a8c7;
+}
+a.blue3{
+  color: #79a8c7;
+}
+
+
+.yellow {
+  color: #d4cd45
+}
+a.yellow {
+  color: #d4cd45
+}
+
+
+.green2 {
+  color: #00a273
+}
+a.green2 {
+  color: #00a273
+}
+
+
+
+h1 a {
+  text-decoration: none;
+}
+
+
+
+ul {
+  list-style: none; /* Remove default bullets */
+}
+
+ul li::before {
+  content: "\2022";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
+  color: #79a8c7; /* Change the color */
+  font-weight: bold; /* If you want it to be bold */
+  display: inline-block; /* Needed to add space between the bullet and the text */
+  width: 1em; /* Also needed for space (tweak if needed) */
+  margin-left: -1em; /* Also needed for space (tweak if needed) */
+}
+
+ol {
+
+  color: #79a8c7;
+}
