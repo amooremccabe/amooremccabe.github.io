@@ -30,7 +30,9 @@ h3 {
 }
 figure > * {
   margin: 0 auto 0.55em;
-  display:block;
+  display:block
+  
+
 }
 figure > * {
   text-align: center;
