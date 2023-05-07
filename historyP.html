@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+
+  <meta charset="utf-8">
+  <title>Axel M. - Honors Project</title>
+  <link href="styleP.css" rel="stylesheet" />
+  <script language="javascript">
+//by iljitsch @ https://arstechnica.com/civis/threads/javascript-for-image-aware-scrolling.1479778/
+lastkeywasnav = 1;
+window.addEventListener('keydown', scrolltoimg);
+
+function scrolltoimg()
+{
+  key = event.code;
+  if (lastkeywasnav && key == "Space")
+    {
+      for (i = 0; i < document.images.length; i++)
+        {
+          if (document.images[i].getBoundingClientRect().top < window.innerHeight &&
+              document.images[i].getBoundingClientRect().bottom > window.innerHeight)
+            {
+              document.images[i].scrollIntoView({ behavior: "smooth", block: "center" });
+              event.preventDefault();
+              break;
+            }
+        }
+    }
+  lastkeywasnav = (key == "Space" || key == "PageUp" || key == "PageDown" ||
+                   key == "ArrowLeft" || key == "ArrowRight" ||
+                   key == "ArroUp" || key == "ArroDown");
+}
+</script>
+</head>
+<body>
+  <h1><a href="index.html" class="orange1">small</a></h1>
+  <h1><a href="index.html" class="yellow">things</a></h1>
+<a href="process.html" class="green2">click here if you're not presenting</a>
+  <br>
+  <p class="blue3"><br><br><br><br><br><br><br><br><br><br>
+<img src="img/sketchbook/hist1.jpeg" alt=""><br><br>
+<img src="img/sketchbook/hist2.jpeg" alt=""><br><br>
+<img src="img/sketchbook/hist3.jpeg" alt=""><br><br>
+<img src="img/sketchbook/hist3.jpeg" alt=""><br><br>
+<img src="img/Q6.png" alt=""><br><br>
+<img src="img/Q7.png" alt=""><br><br>
+<img src="img/Q8.png" alt=""><br><br>
+<img src="img/Q13.png" alt=""><br><br>
+</p>
+</body>
+
+</html>
