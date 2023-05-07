@@ -31,12 +31,12 @@ h3 {
 figure > * {
   margin: 0 auto 0.55em;
   display:block
-  
+
 
 }
 figure > * {
   text-align: center;
-  color: #79a8c7;
+  color: #b0cfd1;
 }
 /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 600px) {
