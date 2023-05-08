@@ -6,20 +6,25 @@ img {
   margin-right: auto;
 }
 
-
+@font-face {
+    font-family: 'FuturaBook';
+    src: url('FuturaBook.ttf');
+}
+h1{
+font-family: 'FuturaBook', sans-serif;
+letter-spacing: .2rem;
+}
 
 body {
   background-color: #29465b;
 margin: 30px;
-font-family: 'Playfair Display', sans-serif;}
-
-
+font-family: 'Playfair Display';}
 
 .orange1 {
-  color: #d47d31
+  color: #e64e43
 }
 a.orange1 {
-  color: #d47d31
+  color: #e64e43
 }
 
 
@@ -32,10 +37,10 @@ a.blue3{
 
 
 .yellow {
-  color: #d4cd45
+  color: #ffffff
 }
 a.yellow {
-  color: #d4cd45
+  color: #ffffff
 }
 
 

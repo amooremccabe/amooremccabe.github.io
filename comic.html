@@ -7,14 +7,52 @@
 
   <meta charset="utf-8">
   <title>Axel M. - Honors Project</title>
-  <link href="style.css" rel="stylesheet" />
+  <link href="styleC.css" rel="stylesheet" />
 </head>
 <body>
+  <script language="javascript">
+//by iljitsch @ https://arstechnica.com/civis/threads/javascript-for-image-aware-scrolling.1479778/
+lastkeywasnav = 1;
+window.addEventListener('keydown', scrolltoimg);
+
+function scrolltoimg()
+{
+  key = event.code;
+  if (lastkeywasnav && key == "Space")
+    {
+      for (i = 0; i < document.images.length; i++)
+        {
+          if (document.images[i].getBoundingClientRect().top < window.innerHeight &&
+              document.images[i].getBoundingClientRect().bottom > window.innerHeight)
+            {
+              document.images[i].scrollIntoView({ behavior: "smooth", block: "center" });
+              event.preventDefault();
+              break;
+            }
+        }
+    }
+  lastkeywasnav = (key == "Space" || key == "PageUp" || key == "PageDown" ||
+                   key == "ArrowLeft" || key == "ArrowRight" ||
+                   key == "ArroUp" || key == "ArroDown");
+}
+</script>
   <h1><a href="index.html" class="orange1">small</a></h1>
   <h1><a href="index.html" class="yellow">things</a></h1>
-<p class="green2">i'm very sorry. press z. it might help.
+<p class="green2">the web-comic! (press space)
   <br><br><br>
-<iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FgCC86N7XVRTQTgE1F994uG%2Fcomic%3Fnode-id%3D556-3%26scaling%3Dmin-zoom%26page-id%3D0%253A1%26starting-point-node-id%3D556%253A3" allowfullscreen></iframe>
+<img src="img/comic/comic1.png" alt=""><br><br>
+<img src="img/comic/comic2.png" alt=""><br><br>
+<img src="img/comic/comic3.png" alt=""><br><br>
+<img src="img/comic/comic4.png" alt=""><br><br>
+<img src="img/comic/comic5.png" alt=""><br><br>
+<img src="img/comic/comic6.png" alt=""><br><br>
+<img src="img/comic/comic7.png" alt=""><br><br>
+<img src="img/comic/comic8.png" alt=""><br><br>
+<img src="img/comic/comic9.png" alt=""><br><br>
+<img src="img/comic/comic10.png" alt=""><br><br>
+<img src="img/comic/comic11.png" alt=""><br><br>
+<img src="img/comic/comic12.png" alt=""><br><br>
+
 </body>
 
 </html>

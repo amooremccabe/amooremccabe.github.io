@@ -1,28 +1,23 @@
 img {
-  max-height: 94vh;
-  max-width: 100%;
+  height: 94vh;
   display: block;
   margin-left: auto;
   margin-right: auto;
 }
-
 @font-face {
     font-family: 'FuturaBook';
     src: url('FuturaBook.ttf');
 }
+
+
+body {
+  background-color: #29465b;
+margin: 30px;
+font-family: 'Playfair Display';}
 h1{
 font-family: 'FuturaBook', sans-serif;
 letter-spacing: .2rem;
 }
-
-
-body {
-  background-color: #000000;
-margin: 30px;
-font-family: 'Playfair Display', sans-serif;}
-
-
-
 .orange1 {
   color: #e64e43
 }
