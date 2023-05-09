@@ -1,9 +1,16 @@
 img {
-  width: 50%;
+  width: 70%;
   height: auto;
   display: block;
   margin-left: auto;
   margin-right: auto;
+}
+img.absolute {
+  position: absolute;
+  top: 30px;
+  right: 20px;
+  max-width: 40%;
+  z-index: -1;
 }
 
 @font-face {
@@ -57,7 +64,9 @@ h1 a {
   text-decoration: none;
 }
 
-
+p a {
+  color: #e64e43
+}
 
 ul {
   list-style: none; /* Remove default bullets */
