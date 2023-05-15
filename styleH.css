@@ -3,6 +3,28 @@
     font-family: 'FuturaBook';
     src: url('FuturaBook.ttf');
 }
+
+
+@font-face {
+    font-family: 'EBGaramond-Regular';
+    src: url('EBGaramond-Regular.ttf');
+}
+@font-face {
+    font-family: 'EBGaramond-Italic';
+    src: url('EBGaramond-Italic.ttf');
+}
+
+i {
+  font-family: EBGaramond-Italic;
+}
+
+body {
+  background-color: #29465b;
+margin: 30px;
+font-family: 'EBGaramond-Regular';
+font-size: 13.5pt;
+}
+
 h1{
 font-family: 'FuturaBook', sans-serif;
 letter-spacing: .2rem;
@@ -14,16 +36,32 @@ letter-spacing: .2rem;
   padding: 0 4px;
 }
 
+.row2 {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
 /* Create four equal columns that sits next to each other */
 .column {
   flex: 30%;
   max-width: 30%;
   padding: 0 4px;
 }
+.column2 {
+  flex: 49%;
+  max-width: 49%;
+  padding: 0 4px;
+}
 h3 {
   text-align: center;
 }
 .column img {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
+}
+.column2 img {
   margin-top: 8px;
   vertical-align: middle;
   width: 100%;
@@ -54,10 +92,7 @@ figure > * {
   }
 }
 
-body {
-  background-color: #29465b;
-margin: 30px;
-font-family: 'Playfair Display', sans-serif;}
+
 
 
 p.indent {

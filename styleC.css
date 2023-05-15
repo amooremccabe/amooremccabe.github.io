@@ -9,11 +9,27 @@ img {
     src: url('FuturaBook.ttf');
 }
 
+@font-face {
+    font-family: 'EBGaramond-Regular';
+    src: url('EBGaramond-Regular.ttf');
+}
+@font-face {
+    font-family: 'EBGaramond-Italic';
+    src: url('EBGaramond-Italic.ttf');
+}
+
+i {
+  font-family: EBGaramond-Italic;
+}
 
 body {
   background-color: #29465b;
 margin: 30px;
-font-family: 'Playfair Display';}
+font-family: 'EBGaramond-Regular';
+font-size: 13.5pt;
+}
+
+
 h1{
 font-family: 'FuturaBook', sans-serif;
 letter-spacing: .2rem;
