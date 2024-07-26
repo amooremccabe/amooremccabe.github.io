@@ -1,0 +1,92 @@
+img {
+  height: 94vh;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+@font-face {
+    font-family: 'FuturaBook';
+    src: url('FuturaBook.ttf');
+}
+
+@font-face {
+    font-family: 'EBGaramond-Regular';
+    src: url('EBGaramond-Regular.ttf');
+}
+@font-face {
+    font-family: 'EBGaramond-Italic';
+    src: url('EBGaramond-Italic.ttf');
+}
+
+i {
+  font-family: EBGaramond-Italic;
+}
+
+body {
+  background-color: #29465b;
+margin: 30px;
+font-family: 'EBGaramond-Regular';
+font-size: 13.5pt;
+}
+
+
+h1{
+font-family: 'FuturaBook', sans-serif;
+letter-spacing: .2rem;
+}
+.orange1 {
+  color: #e64e43
+}
+a.orange1 {
+  color: #e64e43
+}
+
+
+.blue3 {
+  color: #79a8c7;
+}
+a.blue3{
+  color: #79a8c7;
+}
+
+
+.yellow {
+  color: #ffffff
+}
+a.yellow {
+  color: #ffffff
+}
+
+
+.green2 {
+  color: #00a273
+}
+a.green2 {
+  color: #00a273
+}
+
+
+
+h1 a {
+  text-decoration: none;
+}
+
+
+
+ul {
+  list-style: none; /* Remove default bullets */
+}
+
+ul li::before {
+  content: "\2022";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
+  color: #79a8c7; /* Change the color */
+  font-weight: bold; /* If you want it to be bold */
+  display: inline-block; /* Needed to add space between the bullet and the text */
+  width: 1em; /* Also needed for space (tweak if needed) */
+  margin-left: -1em; /* Also needed for space (tweak if needed) */
+}
+
+ol {
+
+  color: #79a8c7;
+}
