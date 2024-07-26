@@ -6,7 +6,34 @@
   <title>axel moore-mccabe</title>
   <link href="style.css" rel="stylesheet"/>
 </head>
-<body>hellos world
+<body>
+  <img class="fvl" id="fvl" src="./img/free vl1.png" alt="free violin lessons">
+  <a href="free-violin-lessons"><img class="fvl2" id="fvl2" src="./img/free vl2.png" alt="free violin lessons"></a>
+
+  <img class="amoore" id="amoore" src="./img/amoore.png" alt="axel moore-mccabe">
+  <img class="hq" id="hq" src="./img/hi qu at a lo pr.png" alt="high quality violining at a low price">
+
+  <img class="violin" src="./img/violin.png" alt="green violin">
+<script>
+
+function setTops() {
+  w = window.innerWidth
+  document.getElementById("fvl").style.top = w*.02 + 'px';
+  document.getElementById("fvl2").style.top = w*.02 + 'px';
+
+  document.getElementById("amoore").style.top = w*.05 + 'px';
+  document.getElementById("hq").style.top = w*.140 + 'px';  
+}
+
+setTops()
+
+window.addEventListener('resize', function(event){
+setTops()
+});
+
+
+
+</script>
 </body>
 
 </html>
