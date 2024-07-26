@@ -10,11 +10,11 @@ img.violin {
     width: 59%;
 }
 
-img.amoore {
+img.contact {
 	display: block;
 	position: absolute;
-    left: 31%;
-    width: 38%;
+    left: 42.2135415%;
+    width: 15.572917%;
 }
 
 img.hq {
@@ -53,28 +53,28 @@ img.fvl2:hover {
 
 
 
-img.con {
+img.hom {
 	display: block;
 	position: absolute;
     left: 2.5%;
-    width: 9.583333%;
+    width: 6.666667%;
     cursor: pointer;
 }
-img.con:hover {
+img.hom:hover {
 	opacity: 0;
 	cursor: pointer;
 }
 
 
-img.con2 {
+img.hom2 {
 	display: block;
 	position: absolute;
     left: 2.5%;
-    width: 9.583333%;
+    width: 6.666667%;
     cursor: pointer;
     opacity: 0;
 }
-img.con2:hover {
+img.hom2:hover {
 	opacity: 1;
 	cursor: pointer;
 }
