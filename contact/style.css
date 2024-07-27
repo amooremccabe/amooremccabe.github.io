@@ -8,6 +8,7 @@ img.violin {
     top: 0;
     right: 0;
     width: 59%;
+    z-index: 0;
 }
 
 img.contact {
@@ -21,7 +22,7 @@ img.hq {
 	display: block;
 	position: absolute;
     left: 35%;
-    width: 30%;
+    width: 15.885417%;
 }
 
 
@@ -33,6 +34,10 @@ img.fvl {
     cursor: pointer;
 }
 img.fvl:hover {
+	opacity: 0;
+	cursor: pointer;
+}
+img.fvl:focus {
 	opacity: 0;
 	cursor: pointer;
 }
@@ -50,7 +55,10 @@ img.fvl2:hover {
 	opacity: 1;
 	cursor: pointer;
 }
-
+img.fvl2:focus {
+	opacity: 1;
+	cursor: pointer;
+}
 
 
 img.hom {
@@ -105,6 +113,62 @@ img.ev2 {
     cursor: pointer;
 }
 img.ev2:hover {
+	opacity: 1;
+	cursor: pointer;
+}
+
+
+
+img.em {
+	display: block;
+	position: absolute;
+    left: 47.5%;
+    width: 19.0625%; 
+  	z-index: 1;
+    cursor: pointer;
+}
+img.em:hover {
+	opacity: 0;
+	cursor: pointer;
+}
+
+img.em2 {
+	display: block;
+	position: absolute;
+    left: 47.5%;
+    width: 19.0625%; 
+    opacity: 0;
+    cursor: pointer;
+    z-index: 1;
+}
+img.em2:hover {
+	opacity: 1;
+	cursor: pointer;
+}
+
+img.nu {
+	display: block;
+	position: absolute;
+    left: 52.5%;
+    width: 15.729167%; 
+  	z-index: 1;
+    cursor: pointer;
+}
+img.nu:hover {
+	opacity: 0;
+	cursor: pointer;
+}
+
+img.nu2 {
+	display: block;
+	position: absolute;
+    left: 52.5%;
+    width: 15.729167%; 
+    opacity: 0;
+    cursor: pointer;
+    z-index: 1;
+}
+img.nu2:hover {
 	opacity: 1;
 	cursor: pointer;
 }
