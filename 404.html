@@ -1,29 +1,42 @@
-<!DOCTYPE html> 
-<html lang="en"> 
-  
-<head> 
-    <meta charset="UTF-8"> 
-    <meta name="viewport" 
-          content="width=device-width,  
-                   initial-scale=1.0"> 
-    <title> 
-        404 Page Not Found 
-    </title> 
-    <link rel="stylesheet" 
-          href="style.css"> 
-</head> 
-  
-<body> 
-    <div class="error-container"> 
-        <h1> 404 </h1> 
-        <p> 
-            Oops! The page you're 
-            looking for is not here. 
-        </p> 
-        <a href="https://violining.org"> 
-            Go Back to Home 
-        </a> 
-    </div> 
-</body> 
-  
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+  <title>axel moore-mccabe</title>
+  <link href="style404.css" rel="stylesheet"/>
+</head>
+<body>
+
+  <img class="hom" id="hom" src="./img/home1.png" aria-label="return to homepage">
+  <a href="./"><img class="hom2" id="hom2" src="./img/home2.png" aria-label="return to homepage"</a>
+ 
+
+  <img class="amoore" id="amoore" src="./img/404.png" alt="error 404">
+  <img class="nf" id="nf" src="./img/page not found.png" alt="page not found">
+
+  <img class="violin" src="./img/weird violin.png" alt="weird violin">
+<script>
+
+function setTops() {
+  w = window.innerWidth
+  document.getElementById("hom").style.top = w*.31 + 'px';
+  document.getElementById("hom2").style.top = w*.31 + 'px';
+
+  document.getElementById("amoore").style.top = w*.19 + 'px';
+  document.getElementById("nf").style.top = w*.26 + 'px';  
+}
+
+setTops()
+
+window.addEventListener('resize', function(event){
+setTops()
+});
+
+
+
+</script>
+</body>
+
 </html>
