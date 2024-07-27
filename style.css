@@ -25,6 +25,23 @@ img.hq {
 }
 
 
+img.yr {
+	display: block;
+	position: absolute;
+    left: 7%;
+    width: 40.104167%;
+
+}
+
+img.yrs {
+	display: block;
+	position: absolute;
+    left: 2.0%;
+    width: 48.802083%;
+
+}
+
+
 img.fvl {
 	display: block;
 	position: absolute;
