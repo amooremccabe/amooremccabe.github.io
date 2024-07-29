@@ -7,7 +7,8 @@ img.violin {
 	position: absolute;
     top: 0;
     right: 0;
-    width: 59%;
+    width: 60%;
+    height: auto; 
 }
 
 img.amoore {
@@ -15,6 +16,7 @@ img.amoore {
 	position: absolute;
     left: 31%;
     width: 38%;
+    height: auto; 
 }
 
 img.hq {
@@ -22,6 +24,7 @@ img.hq {
 	position: absolute;
     left: 35%;
     width: 30%;
+    height: auto; 
 }
 
 
@@ -30,6 +33,16 @@ img.yr {
 	position: absolute;
     left: 7%;
     width: 40.104167%;
+    height: auto; 
+
+}
+
+img.gen {
+	display: block;
+	position: absolute;
+    right: 7%;
+    width: 33.4375%;
+    height: auto; 
 
 }
 
@@ -38,9 +51,18 @@ img.yrs {
 	position: absolute;
     left: 2.0%;
     width: 48.802083%;
+    height: auto; 
 
 }
 
+img.lip {
+	display: block;
+	position: absolute;
+    right: 2.0%;
+    width: 48.802083%;
+    height: auto; 
+
+}
 
 img.fvl {
 	display: block;

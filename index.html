@@ -21,17 +21,71 @@
   
   <img class="hq" id="hq" src="./img/hi qu at a lo pr.png" alt="high quality violining at a low price">
 
-  <img class="yr" id="yr" src="./img/yrs.png" alt="email / telephone">
+  <img class="yr" id="yr" src="./img/yrs.png" alt="years of experience">
 
-  <img class="yrs" id="yrs" src="./img/yrs para.png" alt="email / telephone">
+  <img class="gen" id="gen" src="./img/genres.png" alt="in many genres">
+
+  <img class="yrs" id="yrs" src="./img/yrs para.png" alt="i've been playing the violin for ten years, since i was eight. along the way, i've played many concerts as part of six different ensembles of various sizes, in addition to performing solo work. i've also done street performance downtown and in various malls.">
+
+  <img class="lip" id="lip" src="./img/lipsum.png" alt="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam varius lacinia est quis faucibus. Curabitur imperdiet, erat vitae aliquam vehicula, tortor libero tempor felis, ut elementum nunc nulla eget turpis.">
 
 
 
-  <img class="violin" src="./img/violin.png" alt="green violin">
+  <img class="violin" id="violin" src="./img/violin.png" alt="green violin">
 <script>
+const diff = .7
 
 function setTops() {
   w = window.innerWidth
+  oldW = w
+  smol = 0
+  
+  if (w > 1600) {                 //if the window gets wide enough, then
+    w *= diff;                    //pretend the window is 'diff' pixels narrower
+                                //(while storing the real window wideness in 'oldW')
+  }
+  if (w > 1600) {                 //if the window gets wide enough, then
+    w *= (diff*1.2);                    //pretend the window is 'diff' pixels narrower
+                                //(while storing the real window wideness in 'oldW')
+  }
+
+
+  if (w < 900) {                 //if the window gets wide enough, then
+    w /= diff;                    //pretend the window is 'diff' pixels narrower
+    smol = 1
+  }
+  console.log(smol)
+  document.getElementById("violin").style.width = w*.60 + 'px';
+  if (smol==1) {document.getElementById("violin").style.width = w*.50 + 'px';}   
+
+
+  document.getElementById("amoore").style.width = w*.38 + 'px';
+  document.getElementById("amoore").style.left = (oldW - (w*.38))/2 + 'px';
+  document.getElementById("hq").style.width = w*.30 + 'px';
+  document.getElementById("hq").style.left = (oldW - (w*.30))/2 + 'px';
+  document.getElementById("yr").style.width = w*.40104167 + 'px';
+  document.getElementById("yr").style.left = w*.07 + 'px';
+  document.getElementById("gen").style.width = w*.334375 + 'px';
+  document.getElementById("gen").style.right = w*.12 + 'px';
+  document.getElementById("yrs").style.width = w*.48802083 + 'px';
+  document.getElementById("yrs").style.left = w*.02 + 'px';
+0.4609375
+  document.getElementById("lip").style.width = w*.4609375 + 'px';
+  document.getElementById("lip").style.right = w*.04 + 'px';
+
+  document.getElementById("fvl").style.width = w*.2223 + 'px';
+  document.getElementById("fvl").style.left = w*.025 + 'px';
+  document.getElementById("fvl2").style.width = w*.2223 + 'px';
+  document.getElementById("fvl2").style.left = w*.025 + 'px';
+  document.getElementById("con").style.width = w*.09583333 + 'px';
+  document.getElementById("con").style.left = w*.025 + 'px';
+  document.getElementById("con2").style.width = w*.09583333 + 'px';
+  document.getElementById("con2").style.left = w*.025 + 'px';
+  document.getElementById("ev").style.width = w*.1484375 + 'px';
+  document.getElementById("ev").style.left = w*.025 + 'px';
+  document.getElementById("ev2").style.width = w*.1484375 + 'px';
+  document.getElementById("ev2").style.left = w*.025 + 'px';
+
   document.getElementById("fvl").style.top = w*.02 + 'px';
   document.getElementById("fvl2").style.top = w*.02 + 'px';
 
@@ -42,9 +96,26 @@ function setTops() {
   document.getElementById("con2").style.top = w*.07 + 'px';
 
   document.getElementById("amoore").style.top = w*.05 + 'px';
+  if (smol==1) {document.getElementById("amoore").style.top = w*.1 + 'px';}
+  document.getElementById("violin").style.top = 0 + 'px';
+    document.getElementById("violin").style.right = 0 + 'px';
+  if (smol==1) {
+    document.getElementById("violin").style.top = w*.34 + 'px';
+    document.getElementById("violin").style.right = w*-.02 + 'px';
+  }   
   document.getElementById("hq").style.top = w*.140 + 'px';  
+  if (smol==1) {document.getElementById("hq").style.top = w*.170 + 'px';}
   document.getElementById("yr").style.top = w*.310 + 'px';  
-  document.getElementById("yrs").style.top = w*.40 + 'px';  
+  
+  document.getElementById("yrs").style.top = w*.40 + 'px'; 
+  document.getElementById("lip").style.top = w*.77 + 'px'; 
+
+  document.getElementById("gen").style.top = w*.69 + 'px';  
+  if (smol==1) {document.getElementById("gen").style.top = w*.92 + 'px';
+document.getElementById("gen").style.right = w*.06 + 'px';
+document.getElementById("lip").style.top = w*1. + 'px';}
+
+
 }
 
 setTops()
