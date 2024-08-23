@@ -40,7 +40,18 @@
   
 
 <script>
+
+setTops()
 const diff = .7
+
+function getDocHeight() { // from j11y.io/javascript/get-document-height-cross-browser/
+    var D = document;
+    return Math.max(
+        Math.max(D.body.scrollHeight, D.documentElement.scrollHeight),
+        Math.max(D.body.offsetHeight, D.documentElement.offsetHeight),
+        Math.max(D.body.clientHeight, D.documentElement.clientHeight)
+    );
+}
 
 function setTops() {
   w = window.innerWidth;
@@ -48,9 +59,10 @@ function setTops() {
   smol = 0;
   marge = 0;
   big = 0;
+  console.log("Page height:",getDocHeight());
   if (w > 1600) {                 //if the window gets wide enough, then
     marge = w - 1600;
-    console.log(marge);
+  
     w= 1600;                    //pretend the window is 'diff' pixels narrower
     big = 1;
   }
@@ -64,6 +76,8 @@ function setTops() {
   document.getElementById("violin").style.width = w*.60 + 'px';
   if (smol==1) {document.getElementById("violin").style.width = w*.50 + 'px';}   
 
+
+document.getElementById("overlay2").style.height = getDocHeight() + 'px';
 
   document.getElementById("amoore").style.width = w*.38 + 'px';
   document.getElementById("amoore").style.left = (oldW - (w*.38))/2 + 'px';
@@ -130,7 +144,9 @@ console.log(marge / 2);
 
 
 setTops()
-
+setTops()
+setTops()
+setTops()
 window.addEventListener('resize', function(event){
 setTops()
 });

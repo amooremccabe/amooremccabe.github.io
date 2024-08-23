@@ -37,6 +37,15 @@
   <div id="overlay2"></div>
 <script>
 const diff = .7
+function getDocHeight() { // from j11y.io/javascript/get-document-height-cross-browser/
+    var D = document;
+    return Math.max(
+        Math.max(D.body.scrollHeight, D.documentElement.scrollHeight),
+        Math.max(D.body.offsetHeight, D.documentElement.offsetHeight),
+        Math.max(D.body.clientHeight, D.documentElement.clientHeight)
+    );
+}
+
 function setTops() {
   
   w = window.innerWidth;
@@ -60,6 +69,7 @@ function setTops() {
 
 
   
+document.getElementById("overlay2").style.height = getDocHeight() + 'px';
 
   document.getElementById("hom").style.top = w*.02 + 'px';
   document.getElementById("hom").style.width = w*.06666667 + 'px';
