@@ -30,28 +30,133 @@
   
   
 
-  <img class="violin" src="./img/violin.png" alt="green violin">
-<script>
+  <img class="violin" id="violin" src="./img/violin.png" alt="green violin">
 
+
+  <div id="overlay"></div>
+  <div id="overlay2"></div>
+<script>
+const diff = .7
 function setTops() {
-  w = window.innerWidth
+  
+  w = window.innerWidth;
+  oldW = w;
+  smol = 0;
+  marge = 0;
+  big = 0;
+  if (w > 1600) {                 //if the window gets wide enough, then
+    marge = w - 1600;
+    console.log(marge);
+    w= 1600;                    //pretend the window is 'diff' pixels narrower
+    big = 1;
+  }
+  
+
+
+  if (w < 900) {                 //if the window gets narrow enough, then
+    w /= diff;                    //pretend the window is 'diff' pixels wider
+    smol = 1;
+  }
+
+
+  
+
   document.getElementById("hom").style.top = w*.02 + 'px';
+  document.getElementById("hom").style.width = w*.06666667 + 'px';
+  document.getElementById("hom").style.left = (marge / 2) + w*.025 + 'px';
+
   document.getElementById("hom2").style.top = w*.02 + 'px';
+  document.getElementById("hom2").style.width = w*.06666667 + 'px';
+  document.getElementById("hom2").style.left = (marge / 2) + w*.025 + 'px';
+
 
   document.getElementById("ev").style.top = w*.045 + 'px';
+  document.getElementById("ev").style.width = w*.1484375 + 'px';
+  document.getElementById("ev").style.left = (marge / 2) + w*.025 + 'px';
+
   document.getElementById("ev2").style.top = w*.045 + 'px';
-  
+  document.getElementById("ev2").style.width = w*.1484375 + 'px';
+  document.getElementById("ev2").style.left = (marge / 2) + w*.025 + 'px';
+
+
   document.getElementById("fvl").style.top = w*.07 + 'px';
+  document.getElementById("fvl").style.width = w*.2223 + 'px';
+  document.getElementById("fvl").style.left = (marge / 2) + w*.025 + 'px';
+
   document.getElementById("fvl2").style.top = w*.07 + 'px';
+  document.getElementById("fvl2").style.width = w*.2223 + 'px';
+  document.getElementById("fvl2").style.left = (marge / 2) + w*.025 + 'px';
+
+
+
 
   document.getElementById("contact").style.top = w*.06 + 'px';
-  document.getElementById("hq").style.top = w*.140 + 'px';  
+  if (smol==1) {
+    document.getElementById("contact").style.top = w*.1 + 'px';
+  }
+  document.getElementById("contact").style.width = w*.15572917 + 'px';
+  document.getElementById("contact").style.left = (oldW - (w*.15572917))/2 + 'px';
 
+
+  document.getElementById("hq").style.top = w*.140 + 'px';  
+  document.getElementById("hq").style.width = w*.15885417 + 'px';  
+  document.getElementById("hq").style.left = (marge / 2) + w*.335 + 'px';  
+
+if (smol==1) {
+  document.getElementById("hq").style.top = w*.170 + 'px';
+  document.getElementById("hq").style.left = (marge / 2) + w*.2045 + 'px'; 
+}
+44
   document.getElementById("em").style.top = w*.139 + 'px';
+  document.getElementById("em").style.width = w*.190625+ 'px';
+  document.getElementById("em").style.left = (marge / 2) + w*.46 + 'px';  
+
+if (smol==1) {
+  document.getElementById("em").style.top = w*.170 + 'px';
+  document.getElementById("em").style.left = (marge / 2) + w*.335 + 'px';  
+}
   document.getElementById("em2").style.top = w*.139  + 'px';
+  document.getElementById("em2").style.width = w*.190625+ 'px';
+  document.getElementById("em2").style.left = (marge / 2) + w*.46 + 'px';  
+
+if (smol==1) {
+  document.getElementById("em2").style.top = w*.170 + 'px';
+  document.getElementById("em2").style.left = (marge / 2) + w*.335 + 'px';  
+}
 
   document.getElementById("nu").style.top = w*.183 + 'px';
+  document.getElementById("nu").style.width = w*.15729167 + 'px';
+  document.getElementById("nu").style.left = (marge / 2) + w*.51 + 'px';
+if (smol==1) {
+  document.getElementById("nu").style.top = w*.214 + 'px';
+  document.getElementById("nu").style.left = (marge / 2) + w*.385 + 'px';  
+}
   document.getElementById("nu2").style.top = w*.183  + 'px';
+  document.getElementById("nu2").style.width = w*.15729167 + 'px';
+  document.getElementById("nu2").style.left = (marge / 2) + w*.51 + 'px';
+if (smol==1) {
+  document.getElementById("nu2").style.top = w*.214 + 'px';
+  document.getElementById("nu2").style.left = (marge / 2) + w*.385 + 'px';  
+}
+
+
+
+
+
+  document.getElementById("violin").style.width = w*.60 + 'px'; 
+  if (smol==1) {document.getElementById("violin").style.width = w*.50 + 'px';}
+  document.getElementById("violin").style.right = (marge / 2) + 'px';
+
+
+  
+  document.getElementById("violin").style.top = 0 + 'px';
+
+  if (smol==1) {
+    document.getElementById("violin").style.top = w*.14 + 'px';
+
+  }
+  
+
 }
 
 setTops()

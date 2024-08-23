@@ -137,7 +137,6 @@ img.con2:hover {
 
 
 
-
 img.ev {
 	display: block;
 	position: absolute;
@@ -185,7 +184,7 @@ img.ev2:hover {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #bf7d0b20; /* Black background with opacity */
+  background-color: #bf7d0b10; /* Black background with opacity */
   z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
 
   pointer-events: none;
@@ -193,16 +192,16 @@ img.ev2:hover {
 
 
 #overlay2 {
-  position: fixed; /* Sit on top of the page content */
+  position: absolute; /* Sit on top of the page content */
   display: block; /* Hidden by default */
   width: 100%; /* Full width (cover the whole page) */
-  height: 100%; /* Full height (cover the whole page) */
+  height: 150%; /* Full height (cover the whole page) */
   top: 0;
   right: 0;
   bottom: 0;
   background-image: url(./img/white-plaster-texture.jpg);
   background-repeat:repeat;
   z-index: 3; /* Specify a stack order in case you're using a different order for other elements */
-  opacity: .2;
+  opacity: .3;
   pointer-events: none;
 }
