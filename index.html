@@ -239,7 +239,7 @@ setTops();
 window.addEventListener("orientationchange", function() {
   document.getElementById("overlay2").style.height = 150 + 'px';
 setTops();
-alert(window.orientation);
+setTimeout(setTops, 30);
 }, false);
 
 
