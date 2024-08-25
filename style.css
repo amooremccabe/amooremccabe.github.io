@@ -1,6 +1,6 @@
 body {
 	margin: 0;
-
+  background-color: white;
 
 
 }
@@ -164,14 +164,44 @@ img.ev2:hover {
 }
 
 
+video.video {
+  display: block;
+  position: absolute;
+    left: 2.5%;
+    z-index: -1;
+    top: 30%;
+  filter: brightness(calc(100% + var(--threshold2))) grayscale(100%) contrast(1000%);
+}
 
+button#toggle.controls__button.toggleButton {
+  display: block;
+  position: absolute;
+   
+    z-index: 1;
+   
+  
 
+}
+
+img#butt {
+  position: absolute;
+  z-index: 4;
+} 
 
 :root{
 --threshold:50%;
+--threshold2:2%;
 }
 
+.gruntvid {
+  position: absolute; /* Sit on top of the page content */
+  display: block; /* Hidden by default */
+  z-index: 2;
+  background-image: url("./img/grunt vid2.png");
+  mix-blend-mode: lighten;
 
+  pointer-events: none;
+}
 
 
 
@@ -185,7 +215,7 @@ img.ev2:hover {
   right: 0;
   bottom: 0;
   background-color: #bf7d0b30; /* Black background with opacity */
-  z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+  z-index: 3; /* Specify a stack order in case you're using a different order for other elements */
 
   pointer-events: none;
 }
@@ -202,6 +232,6 @@ img.ev2:hover {
   background-image: url(./img/white-plaster-texture.jpg);
   background-repeat:repeat;
   z-index: 3; /* Specify a stack order in case you're using a different order for other elements */
-  opacity: .3;
+  opacity: .4;
   pointer-events: none;
 }
