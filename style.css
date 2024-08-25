@@ -232,6 +232,6 @@ img#butt {
   background-image: url(./img/white-plaster-texture.jpg);
   background-repeat:repeat;
   z-index: 3; /* Specify a stack order in case you're using a different order for other elements */
-  opacity: .4;
+  opacity: .3;
   pointer-events: none;
 }
