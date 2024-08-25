@@ -233,9 +233,13 @@ setTimeout(setTops, 30);
 
 window.addEventListener('resize', function(event){
 document.getElementById("overlay2").style.height = 150 + 'px';
-setTops()
+setTops();
 });
 
+window.addEventListener("orientationchange", function() {
+  document.getElementById("overlay2").style.height = 150 + 'px';
+setTops();
+}, false);
 
 
 </script>
