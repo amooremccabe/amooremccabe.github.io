@@ -31,6 +31,15 @@ img.amoore {
     z-index: 1;
 }
 
+img.soco {
+  display: block;
+  position: absolute;
+}
+img.bar {
+  display: block;
+  position: absolute;
+  z-index: 0;
+}
 img.hq {
 	display: block;
 	position: absolute;
@@ -184,7 +193,6 @@ button#toggle.controls__button.toggleButton {
    
     z-index: 1;
    
-  
 
 }
 
@@ -195,7 +203,7 @@ img#butt {
 
 :root{
 --threshold:50%;
---threshold2:2%;
+--threshold2:1%;
 }
 
 .gruntvid {
@@ -221,7 +229,6 @@ img#butt {
   bottom: 0;
   background-color: #bf7d0b30; /* Black background with opacity */
   z-index: 3; /* Specify a stack order in case you're using a different order for other elements */
-
   pointer-events: none;
 }
 
@@ -234,9 +241,10 @@ img#butt {
   top: 0;
   right: 0;
   bottom: 0;
-  background-image: url(./img/white-plaster-texture.jpg);
+  background-image: url(./img/white-plaster-texture.webp);
   background-repeat:repeat;
   z-index: 3; /* Specify a stack order in case you're using a different order for other elements */
   opacity: .3;
+  filter: contrast(120%);
   pointer-events: none;
 }

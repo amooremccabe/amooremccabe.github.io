@@ -14,6 +14,7 @@
 <meta name="theme-color" content="#ffffff">
 </head>
 <body>
+<img class="soco" id="soco" src="./img/soco.png" alt="sonoma county.png">
   <img class="fvl" id="fvl" src="./img/free vl1.png" alt="free violin lessons">
   <a href="free-violin-lessons"><img class="fvl2" id="fvl2" src="./img/free vl2.png" alt=""></a>
 
@@ -37,13 +38,16 @@
 
 
 
-  <img class="violin" class="threshold" id="violin" src="./img/violin.png" alt="green violin">
+  <img class="violin" class="threshold" id="violin" src="./img/violin.webp" alt="green violin">
+
+
 
 <div class="gruntvid" id="grv"></div>
 
 
 
-
+<img class="bar" id="bar" src="./img/barrier.png" alt="">
+<img class="bar" id="bar2" src="./img/barrier.png" alt="">
 
 
 
@@ -145,6 +149,11 @@ function setTops() {
   document.getElementById("amoore").style.left = (oldW - (w*.38))/2 + 'px';
   document.getElementById("amoore").style.top = w*.05 + 'px';
 
+  0.22322775
+  document.getElementById("soco").style.width = w*.223 + 'px';  //sonoma county, ca
+  document.getElementById("soco").style.left = (oldW - (w*.223))/2 + 'px';
+  document.getElementById("soco").style.top = 0 + 'px';
+
   document.getElementById("hq").style.width = w*.30 + 'px';   //high-quality violining at a low price
   document.getElementById("hq").style.left = (oldW - (w*.30))/2 + 'px';
   document.getElementById("hq").style.top = w*.140 + 'px';  
@@ -198,10 +207,18 @@ function setTops() {
 
 
 document.getElementById("vid").style.left = w*.015 + (marge / 2) + 'px';  //video
-document.getElementById("vid").style.width = w*.45173454 + 'px';
-document.getElementById("vid").style.top = w*.74 + 'px';
+document.getElementById("vid").style.width = w*.44 + 'px';
+document.getElementById("vid").style.top = w*.65 + 'px';
 
-document.getElementById("toggle").style.top = w*.82 + 'px';
+document.getElementById("bar").style.height = document.getElementById("vid").offsetHeight + 5 + 'px';
+document.getElementById("bar").style.top = w*.665 + 'px'; 
+document.getElementById("bar").style.left = w*.44 + (marge / 2) + 'px'; 
+document.getElementById("bar2").style.height = document.getElementById("vid").offsetHeight + 5 + 'px';
+document.getElementById("bar2").style.top = w*.665 + 'px'; 
+document.getElementById("bar2").style.left = (marge / 2) + 'px'; 
+
+
+document.getElementById("toggle").style.top = w*.77 + 'px';
 document.getElementById("toggle").style.left = w*.23 + (marge / 2) + 'px';
 document.getElementById("toggle").style.width = w*.07993967 + 'px';
 document.getElementById("toggle").style.height = w*.07993967 + 'px';
@@ -211,7 +228,7 @@ document.getElementById("butt").style.height = w*.07993967 + 'px';
 document.getElementById("butt").style.top = 0 + 'px';
 document.getElementById("butt").style.left = 0 + 'px';
 
-document.getElementById("grv").style.top = w*.67571644 + 'px';
+document.getElementById("grv").style.top = w*.58571644 + 'px';
 document.getElementById("grv").style.left= (marge / 2) + 'px';
 document.getElementById("grv").style.width = w*.48 + 'px';
 document.getElementById("grv").style.height = w*.34087481 + 'px';
@@ -220,7 +237,7 @@ document.getElementById("grv").style.height = w*.34087481 + 'px';
   
 
 
-console.log(marge / 2);  
+
 
 
 
@@ -261,13 +278,15 @@ console.log(marge / 2);
 
 document.getElementById("vid").style.left = w*.125 + (marge / 2) + 'px';  // re-position the video
 document.getElementById("vid").style.top = w*.855 + 'px';
-
+document.getElementById("vid").style.width = w*.45173454 + 'px';
 document.getElementById("toggle").style.left = w*.315 + (marge / 2) + 'px';
 document.getElementById("toggle").style.top = w*.88 + 'px';
 
 
 document.getElementById("grv").style.left= w*.1 + 'px';
 document.getElementById("grv").style.top = w*.85071644 + 'px';
+
+  document.getElementById("soco").style.top = w*.06 + 'px'; // re-position the video
   }
 
 
