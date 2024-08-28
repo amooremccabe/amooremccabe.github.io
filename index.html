@@ -3,7 +3,11 @@
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta charset="utf-8">
+  <meta
+  name="description"
+  content="High-Quality Violining at a Low Price | Sonoma County, CA (Free Lessons!)"> 
   <title>violining | axel moore-mccabe</title>
+
   <link href="style.css" rel="stylesheet"/>
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -12,6 +16,11 @@
 <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5c5444">
 <meta name="msapplication-TileColor" content="#fef3e0">
 <meta name="theme-color" content="#ffffff">
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap');
+</style>
+
 </head>
 <body>
 <img class="soco" id="soco" src="./img/soco.png" alt="sonoma county.png">
@@ -40,7 +49,9 @@
 
   <img class="violin" class="threshold" id="violin" src="./img/violin.webp" alt="green violin">
 
+<div class="amoore2" id="amoore2"><h1 class="source-serif-4"id="amoore3">Axel Moore-McCabe </h></div>
 
+<div class="hq2" id="hq2"><h1 class="source-serif-4"id="hq3">High-Quality Violining <br> <span id="narrow">at a</span> <br>Low Price</h></div>
 
 <div class="gruntvid" id="grv"></div>
 
@@ -62,7 +73,7 @@
   </video>
 
   <div class="controls">
-    <button class="controls__button toggleButton" title="play the video" id="toggle">
+    <button class="controls__button toggleButton" alt="play the video" id="toggle">
       <img id="butt" src="./img/real play butt.png"></img>
     </button>
   </div>
@@ -149,6 +160,11 @@ function setTops() {
   document.getElementById("amoore").style.left = (oldW - (w*.38))/2 + 'px';
   document.getElementById("amoore").style.top = w*.05 + 'px';
 
+  document.getElementById("amoore2").style.width = w*.45 + 'px';  //axel moore-mccabe
+  document.getElementById("amoore2").style.left = (oldW - (w*.45))/2 + 'px';
+  document.getElementById("amoore2").style.top = w*.030 + 'px';
+  document.getElementById("amoore3").style.fontSize = w*0.033 + 'px';  
+  document.getElementById("amoore3").style.letterSpacing = w/150 + 'px';  
   0.22322775
   document.getElementById("soco").style.width = w*.223 + 'px';  //sonoma county, ca
   document.getElementById("soco").style.left = (oldW - (w*.223))/2 + 'px';
@@ -158,6 +174,13 @@ function setTops() {
   document.getElementById("hq").style.left = (oldW - (w*.30))/2 + 'px';
   document.getElementById("hq").style.top = w*.140 + 'px';  
 
+
+document.getElementById("hq2").style.width = w*.33 + 'px';   //high-quality violining at a low price
+  document.getElementById("hq2").style.left = (oldW - (w*.33))/2 + 'px';
+  document.getElementById("hq2").style.top = w*.120 + 'px';  
+  document.getElementById("hq3").style.fontSize = w*0.02 + 'px';  
+  document.getElementById("hq3").style.letterSpacing = w/200 + 'px';  
+  document.getElementById("narrow").style.letterSpacing = w/950 + 'px';  
 
                                                               //menu
   document.getElementById("fvl").style.width = w*.2223 + 'px';  //free (!) violin lessons
@@ -271,9 +294,10 @@ document.getElementById("grv").style.height = w*.34087481 + 'px';
     
 
     document.getElementById("amoore").style.top = w*.1 + 'px';         //re-position axel moore-mccabe
-
+    document.getElementById("amoore2").style.top = w*.075 + 'px'; 
 
     document.getElementById("hq").style.top = w*.170 + 'px';               //it do be that way tho
+    document.getElementById("hq2").style.top = w*.150 + 'px';               //it do be that way tho
 
 
 document.getElementById("vid").style.left = w*.125 + (marge / 2) + 'px';  // re-position the video

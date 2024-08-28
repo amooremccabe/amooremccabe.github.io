@@ -10,6 +10,13 @@ body {
 
 }
 
+h1.source-serif-4 {
+  font-family: "Source Serif 4", serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+
 img.violin {
 	display: block;
 	position: absolute;
@@ -29,6 +36,7 @@ img.amoore {
     width: 38%;
     height: auto; 
     z-index: 1;
+    pointer-events: none;
 }
 
 img.soco {
@@ -47,8 +55,32 @@ img.hq {
     width: 30%;
     height: auto; 
     z-index: 1;
+    pointer-events: none;
 }
 
+div.hq2 {
+  display: block;
+  position: absolute !important;
+  text-align: center;
+  letter-spacing: 6px;
+  opacity: 1;
+  color: white;
+
+
+}
+
+div.amoore2 {
+  display: block;
+  position: absolute !important;
+  text-align: center;
+  letter-spacing: 6px;
+  opacity: 1;
+  color: white;
+}
+
+::selection {
+  color: #6CA492;
+  background: #6CA492;}
 
 img.yr {
 	display: block;
@@ -174,9 +206,18 @@ img.ev2 {
 }
 img.ev2:hover {
 	opacity: 1;
-	cursor: pointer;
+	cursor: pointer;scale: ;
 }
 
+
+img {
+   user-drag: none;
+    -webkit-user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
 
 video.video {
   display: block;
