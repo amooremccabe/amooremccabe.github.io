@@ -1,6 +1,7 @@
 html, body {
+
     max-width: 100%;
-    overflow-x: hidden;
+    overflow-x: hidden; 
 }
 
 body {
@@ -27,6 +28,8 @@ img.violin {
     z-index: 0;
 
     filter: brightness(calc(100% + var(--threshold))) grayscale(100%) contrast(1000%);
+
+  overflow-x: hidden;
 }
 
 img.amoore {
