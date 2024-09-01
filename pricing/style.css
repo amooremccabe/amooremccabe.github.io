@@ -82,10 +82,14 @@ img.pricing {
   display: block;
   text-align: center;
 }
+
+
 .slider {
   -webkit-appearance: none;
+  --thumbheight: 25px;
+  --slideheight: 15px;
   width: 100%;
-  height: 15px;
+  height: var(--slideheight);
   background: #d3d3d3;
   outline: none;
   opacity: 0.7;
@@ -98,14 +102,15 @@ img.pricing {
 .slider::-webkit-slider-thumb {
   -webkit-appearance: none;
   appearance: none;
-  width: 25px;
-  height: 25px;
+  width: var(--thumbheight);
+  height: var(--thumbheight);
   background: #6CA492;
   cursor: pointer;
 }
+
 .slider::-moz-range-thumb {
-  width: 25px;
-  height: 25px;
+  width: var(--thumbheight);
+  height: var(--thumbheight);
   background: #6CA492;
   cursor: pointer;
 }
