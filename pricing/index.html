@@ -28,8 +28,8 @@
   <img class="hom" id="hom" src="./img/home1.png" aria-label="return to homepage">
   <a href="../"><img class="hom2" id="hom2" src="./img/home2.png" aria-label="return to homepage"</a>
 
-  <img class="ev" id="ev" src="./img/event1.png" alt="event pricing">
-  <a href="../pricing"><img class="ev2" id="ev2" src="./img/event2.png" alt=""></a>
+  <img class="ev" id="ev" src="../img/contact1.png" alt="contact">
+  <a href="../contact"><img class="ev2" id="ev2" src="../img/contact2.png" alt=""></a>
 
 
 
@@ -94,6 +94,7 @@ function setTops() {
   if (w < 900) {                 //if the window gets narrow enough, then
     w /= diff;                    //pretend the window is 'diff' pixels wider
     smol = 1;
+    console.log('smol')
   }
 
 
@@ -110,11 +111,11 @@ document.getElementById("overlay2").style.height = getDocHeight() + 150 + 'px';
 
 
   document.getElementById("ev").style.top = w*.045 + 'px';
-  document.getElementById("ev").style.width = w*.1484375 + 'px';
+  document.getElementById("ev").style.width = w*.09583333 + 'px';
   document.getElementById("ev").style.left = (marge / 2) + w*.025 + 'px';
 
   document.getElementById("ev2").style.top = w*.045 + 'px';
-  document.getElementById("ev2").style.width = w*.1484375 + 'px';
+  document.getElementById("ev2").style.width = w*.1 + 'px';
   document.getElementById("ev2").style.left = (marge / 2) + w*.025 + 'px';
 
 
@@ -154,43 +155,37 @@ document.getElementById("overlay2").style.height = getDocHeight() + 150 + 'px';
 
   if (smol==1) {
 
+
   document.getElementById("pricing").style.top = w*.107 + 'px';
   document.getElementById("pricing2").style.top = w*.076 + 'px';
 
-  document.getElementById("hq").style.top = w*.170 + 'px';
-  document.getElementById("hq").style.left = (marge / 2) + w*.2045 + 'px'; 
-
-  document.getElementById("nu").style.top = w*.214 + 'px';
-  document.getElementById("nu").style.left = (marge / 2) + w*.385 + 'px';  
-  document.getElementById("nu2").style.top = w*.214 + 'px';
-  document.getElementById("nu2").style.left = (marge / 2) + w*.385 + 'px';  
-
-  document.getElementById("em").style.top = w*.170 + 'px';
-  document.getElementById("em").style.left = (marge / 2) + w*.335 + 'px';  
-  document.getElementById("em2").style.top = w*.170 + 'px';
-  document.getElementById("em2").style.left = (marge / 2) + w*.335 + 'px';  
 
   document.getElementById("hom").style.width = w/11 + 'px';
   document.getElementById("hom2").style.width = w/11 + 'px';
   document.getElementById("hom").style.left = w*.025 + 'px';
   document.getElementById("hom2").style.left = w*.025 + 'px';
 
-  document.getElementById("ev").style.width = w/4.774 + 'px';
-  document.getElementById("ev2").style.width = w/4.774 + 'px';
+  document.getElementById("ev").style.width = w/7.2 + 'px';
+  document.getElementById("ev2").style.width = w/7.2 + 'px';
   document.getElementById("ev").style.left = w*.143 + 'px';    
   document.getElementById("ev2").style.left = w*.143 + 'px';
-  document.getElementById("ev").style.top = w*.02 + 'px';
-  document.getElementById("ev2").style.top = w*.02 + 'px';
+  document.getElementById("ev").style.top = w*.019 + 'px';
+  document.getElementById("ev2").style.top = w*.019 + 'px';
 
 
   document.getElementById("fvl").style.width = w/3.3 + 'px';
   document.getElementById("fvl2").style.width = w/3.3 + 'px';
   document.getElementById("fvl").style.top = w*.02 + 'px';
   document.getElementById("fvl2").style.top = w*.02 + 'px';
-  document.getElementById("fvl").style.left = w*.38 + 'px';
-  document.getElementById("fvl2").style.left = w*.38 + 'px';
+  document.getElementById("fvl").style.left = w*.315 + 'px';
+  document.getElementById("fvl2").style.left = w*.315 + 'px';
 
-  document.getElementById("soco").style.top = w*.06 + 'px'; // re-position the soco
+
+
+  document.getElementById("rate").style.top = w*.20 + 'px';
+  document.getElementById("slide").style.top = w*.33 + 'px';
+
+
 
   }
   
