@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>violin lessons - not costly</title>
+  <link href="style.css" rel="stylesheet"/>
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5c5444">
+<meta name="msapplication-TileColor" content="#fef3e0">
+<meta name="theme-color" content="#ffffff">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap');
+</style>
+
+</head>
+<body>
+
+  <a href="../contact"><img class="fvl" id="fvl" src="./img/free vl1.png" alt="free violin lessons"></a>
+
+
+  <div id="overlay"></div>
+
+
+  <div id="overlay2"></div>
+
+<script>
+const diff = .7
+function getDocHeight() { // from j11y.io/javascript/get-document-height-cross-browser/
+    var D = document;
+    return Math.max(
+        Math.max(D.body.scrollHeight, D.documentElement.scrollHeight),
+        Math.max(D.body.offsetHeight, D.documentElement.offsetHeight),
+        Math.max(D.body.clientHeight, D.documentElement.clientHeight)
+    );
+}
+
+function setTops() {
+  
+  w = window.innerWidth;
+  oldW = w;
+  smol = 0;
+  marge = 0;
+  big = 0;
+  if (w > 1600) {                 //if the window gets wide enough, then
+    marge = w - 1600;
+    console.log(marge);
+    w= 1600;                    //pretend the window is 'diff' pixels narrower
+    big = 1;
+  }
+  
+
+
+  if (w < 900) {                 //if the window gets narrow enough, then
+    w /= diff;                    //pretend the window is 'diff' pixels wider
+    smol = 1;
+    console.log('smol')
+  }
+
+
+  
+document.getElementById("overlay2").style.height = getDocHeight() + 150 + 'px';
+
+  document.getElementById("hom").style.top = w*.02 + 'px';
+  document.getElementById("hom").style.width = w*.06666667 + 'px';
+  document.getElementById("hom").style.left = (marge / 2) + w*.025 + 'px';
+
+  document.getElementById("hom2").style.top = w*.02 + 'px';
+  document.getElementById("hom2").style.width = w*.06666667 + 'px';
+  document.getElementById("hom2").style.left = (marge / 2) + w*.025 + 'px';
+
+
+  document.getElementById("ev").style.top = w*.045 + 'px';
+  document.getElementById("ev").style.width = w*.09583333 + 'px';
+  document.getElementById("ev").style.left = (marge / 2) + w*.025 + 'px';
+
+  document.getElementById("ev2").style.top = w*.045 + 'px';
+  document.getElementById("ev2").style.width = w*.1 + 'px';
+  document.getElementById("ev2").style.left = (marge / 2) + w*.025 + 'px';
+
+
+  document.getElementById("fvl").style.top = w*.07 + 'px';
+  document.getElementById("fvl").style.width = w*.2223 + 'px';
+  document.getElementById("fvl").style.left = (marge / 2) + w*.025 + 'px';
+
+  document.getElementById("fvl2").style.top = w*.07 + 'px';
+  document.getElementById("fvl2").style.width = w*.2223 + 'px';
+  document.getElementById("fvl2").style.left = (marge / 2) + w*.025 + 'px';
+
+
+
+
+  document.getElementById("pricing").style.top = w*.045 + 'px';
+  document.getElementById("pricing").style.width = w*.15572917 + 'px';
+  document.getElementById("pricing").style.left = (oldW - (w*.15572917))/2 + 'px';
+
+  document.getElementById("pricing2").style.top = w*.03 + 'px';
+  document.getElementById("pricing2").style.width = w*.15572917 + 'px';
+  document.getElementById("pricing2").style.left = (oldW - (w*.15572917))/2 + 'px';
+
+  document.getElementById("pricing3").style.fontSize = w*0.033 + 'px';  
+  document.getElementById("pricing3").style.letterSpacing = w/150 + 'px';  
+
+
+  document.getElementById("rate").style.top = w*.15 + 'px';
+  document.getElementById("rate").style.width = w*.40648567 + 'px';
+  document.getElementById("rate").style.left = (oldW - (w*.39648567))/2 + 'px';
+  
+  document.getElementById("slide").style.top = w*.28 + 'px';
+  document.getElementById("slide").style.width = w*.35 + 'px';
+  document.getElementById("slide").style.left = (oldW - (w*.35))/2 + 'px';
+  document.getElementById("slide").style.fontSize = w*0.027 + 'px';  
+  document.getElementById("out").style.fontSize = w*0.035 + 'px';  
+  document.getElementById("myRange").style.setProperty('--thumbheight','25px')
+  document.getElementById("myRange").style.setProperty('--slideheight','15px')
+
+  if (smol==1) {
+
+  document.getElementById("myRange").style.setProperty('--thumbheight','40px')
+  document.getElementById("myRange").style.setProperty('--slideheight','24px')
+
+  document.getElementById("pricing").style.top = w*.107 + 'px';
+  document.getElementById("pricing2").style.top = w*.076 + 'px';
+
+
+  document.getElementById("hom").style.width = w/11 + 'px';
+  document.getElementById("hom2").style.width = w/11 + 'px';
+  document.getElementById("hom").style.left = w*.025 + 'px';
+  document.getElementById("hom2").style.left = w*.025 + 'px';
+
+  document.getElementById("ev").style.width = w/7.2 + 'px';
+  document.getElementById("ev2").style.width = w/7.2 + 'px';
+  document.getElementById("ev").style.left = w*.143 + 'px';    
+  document.getElementById("ev2").style.left = w*.143 + 'px';
+  document.getElementById("ev").style.top = w*.019 + 'px';
+  document.getElementById("ev2").style.top = w*.019 + 'px';
+
+
+  document.getElementById("fvl").style.width = w/3.3 + 'px';
+  document.getElementById("fvl2").style.width = w/3.3 + 'px';
+  document.getElementById("fvl").style.top = w*.02 + 'px';
+  document.getElementById("fvl2").style.top = w*.02 + 'px';
+  document.getElementById("fvl").style.left = w*.315 + 'px';
+  document.getElementById("fvl2").style.left = w*.315 + 'px';
+
+  document.getElementById("rate").style.width = w*.50 + 'px';
+  document.getElementById("rate").style.left = (oldW - (w*.496))/2 + 'px';
+  document.getElementById("rate").style.top = w*.20 + 'px';
+
+  document.getElementById("slide").style.top = w*.38 + 'px';
+  document.getElementById("slide").style.width = w*.55 + 'px';
+  document.getElementById("slide").style.left = (oldW - (w*.55))/2 + 'px';
+  document.getElementById("slide").style.fontSize = w*0.037 + 'px';  
+  document.getElementById("out").style.fontSize = w*0.045 + 'px';  
+
+
+  }
+  
+
+}
+setTimeout(setTops, 30);
+
+
+window.addEventListener('resize', function(event){
+document.getElementById("overlay2").style.height = 150 + 'px';
+setTops()
+});
+
+var slider = document.getElementById("myRange");
+var output = document.getElementById("demo");
+output.innerHTML = piecewiseFunction(slider.value);
+
+slider.oninput = function() {
+  output.innerHTML = formatMinutes(piecewiseFunction(this.value));
+}
+
+
+
+
+function formatMinutes(minutes) {
+  // Calculate hours and minutes
+  const hours = Math.floor(minutes / 60);
+  const remainingMinutes = Math.ceil(minutes % 60);
+  out = Math.ceil(minutes);
+  document.getElementById("out").innerHTML = USDollar.format((25 + (out*0.91666667)));
+  // Build the formatted string
+  let result = '';
+  if (hours > 0) {
+    result += `${hours} ${hours > 1 ? 'hrs' : 'hr'}`;
+  }
+  if (remainingMinutes > 0) {
+    if (result) result += ' '; // Add a space if there's already a part of the result
+    result += `${remainingMinutes} ${remainingMinutes > 1 ? 'mins' : 'min'}`;
+  }
+
+  // If both hours and minutes are zero, return "0 mins" (or handle as you prefer)
+  if (result === '') {
+    result = '0 min';
+  }
+
+  return result;
+}
+
+
+function piecewiseFunction(x) {
+  if (x >= -1 && x <= 30) {
+    return (4 / 3) * x;
+  } else if (x > 30 && x <= 100) {
+    return 10 + (2 * (x - 15));
+  } else if (x === 30) {
+    // Special case for x = 30 to ensure continuity
+    return (4 / 3) * 30;
+  } else {
+    throw new Error("x is out of the defined range.");
+  }
+}
+
+
+
+
+let delta = 0
+let out = 0
+let USDollar = new Intl.NumberFormat('en-US', {
+    style: 'currency',
+    currency: 'USD',
+    });
+
+
+var start = Date.now();
+const myInterval = setInterval(function() {
+    delta = Date.now() - start; // milliseconds elapsed since start
+    console.log(delta)
+    document.getElementById('myRange').value = -(((delta-1000)/400)**4) + 35;
+    output.innerHTML = formatMinutes(piecewiseFunction(document.getElementById('myRange').value));
+    if (delta > 1000) {
+      clearInterval(myInterval);
+    }
+}, 1); // update about every second
+
+
+if (delta < 1500) {
+      document.getElementById('myRange').value = delta/15;
+    }
+
+</script>
+</body>
+
+</html>
