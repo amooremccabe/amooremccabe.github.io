@@ -215,6 +215,12 @@ function togglePlay() {
   if (ogle.paused || ogle.ended) {
     
     if (RPC == -2) {
+if (video.currentTime > 79)
+      {
+          video.currentTime = 3;
+          
+      }
+
     oneplaying = 1;
     ogle.play();
   }
@@ -229,7 +235,7 @@ function togglePlay() {
       ogle.play();
 
     twoplaying = 1;
-    ogle.play();
+    
   }
     if (RPC == 2) {
       if (video3.currentTime > 125)
@@ -410,6 +416,11 @@ function realMoving() {
 if (video4.currentTime > 221.7) {
     video4.pause();
     video4.currentTime = 221.7;
+
+  }
+if (video.currentTime > 79.4) {
+    video.pause();
+    video.currentTime = 79.5;
 
   }
 
