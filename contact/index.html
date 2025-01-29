@@ -50,8 +50,9 @@
   <div id="overlay"></div>
   <div id="overlay2"></div>
 
-  <div class="contact2" id="contact2"><h1 class="source-serif-4"id="contact3">Contact</h></div>
 
+
+ <div class="contact2" id="contact4"><h1 class="source-serif-4"id="contact5">axel@violining.org</h></div>
 
 
 <script>
@@ -72,10 +73,10 @@ function setTops() {
   smol = 0;
   marge = 0;
   big = 0;
-  if (w > 1600) {                 //if the window gets wide enough, then
-    marge = w - 1600;
+  if (w > 900) {                 //if the window gets wide enough, then
+    marge = w - 900;
     console.log(marge);
-    w= 1600;                    //pretend the window is 'diff' pixels narrower
+    w= 900;                    //pretend the window is 'diff' pixels narrower
     big = 1;
   }
   
@@ -123,12 +124,22 @@ document.getElementById("overlay2").style.height = getDocHeight() + 150 + 'px';
   document.getElementById("contact").style.width = w*.15572917 + 'px';
   document.getElementById("contact").style.left = (oldW - (w*.15572917))/2 + 'px';
 
-  document.getElementById("contact2").style.top = w*.03 + 'px';
-  document.getElementById("contact2").style.width = w*.15572917 + 'px';
-  document.getElementById("contact2").style.left = (oldW - (w*.15572917))/2 + 'px';
 
-  document.getElementById("contact3").style.fontSize = w*0.033 + 'px';  
-  document.getElementById("contact3").style.letterSpacing = w/150 + 'px';  
+
+
+
+
+document.getElementById("contact4").style.top = w*.13 + 'px';
+document.getElementById("contact4").style.zIndex = 0;
+  document.getElementById("contact4").style.width = w*.3 + 'px';
+  document.getElementById("contact4").style.height = w*.12 + 'px';
+  document.getElementById("contact4").style.left = (oldW - (w*.19))/2 + 'px';
+
+  document.getElementById("contact5").style.fontSize = w*0.016 + 'px';  
+  document.getElementById("contact5").style.letterSpacing = w/400 + 'px';  
+ 
+
+
 
   document.getElementById("hq").style.top = w*.140 + 'px';  
   document.getElementById("hq").style.width = w*.15885417 + 'px';  
@@ -169,7 +180,12 @@ document.getElementById("overlay2").style.height = getDocHeight() + 150 + 'px';
   document.getElementById("violin").style.right = w*-.02 + 'px';
 
   document.getElementById("contact").style.top = w*.107 + 'px';
-  document.getElementById("contact2").style.top = w*.076 + 'px';
+
+document.getElementById("contact5").style.letterSpacing = w/300 + 'px';  
+document.getElementById("contact4").style.top = w*.16 + 'px';
+  document.getElementById("contact4").style.width = w*.18 + 'px';
+  document.getElementById("contact4").style.left = (oldW - (w*.03))/2 + 'px';
+
 
   document.getElementById("hq").style.top = w*.170 + 'px';
   document.getElementById("hq").style.left = (marge / 2) + w*.2045 + 'px'; 

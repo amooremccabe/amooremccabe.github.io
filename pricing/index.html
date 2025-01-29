@@ -82,10 +82,10 @@ function setTops() {
   smol = 0;
   marge = 0;
   big = 0;
-  if (w > 1600) {                 //if the window gets wide enough, then
-    marge = w - 1600;
+  if (w > 900) {                 //if the window gets wide enough, then
+    marge = w - 900;
     console.log(marge);
-    w= 1600;                    //pretend the window is 'diff' pixels narrower
+    w= 900;                    //pretend the window is 'diff' pixels narrower
     big = 1;
   }
   
@@ -115,7 +115,7 @@ document.getElementById("overlay2").style.height = getDocHeight() + 150 + 'px';
   document.getElementById("ev").style.left = (marge / 2) + w*.025 + 'px';
 
   document.getElementById("ev2").style.top = w*.045 + 'px';
-  document.getElementById("ev2").style.width = w*.1 + 'px';
+  document.getElementById("ev2").style.width = w*.09583333 + 'px';
   document.getElementById("ev2").style.left = (marge / 2) + w*.025 + 'px';
 
 
