@@ -23,6 +23,7 @@
 
 </head>
 <body>
+
 <img class="soco" id="soco" src="./img/soco.png" alt="sonoma county.png">
   <img class="fvl" id="fvl" src="./img/free vl1.png" alt="free violin lessons">
   <a href="free-violin-lessons"><img class="fvl2" id="fvl2" src="./img/free vl2.png" alt=""></a>
@@ -43,7 +44,11 @@
 
   <img class="yrs" id="yrs" src="./img/yrs para.png" alt="i've been playing the violin for ten years, since i was eight. along the way, i've played many concerts as part of six different ensembles of various sizes, in addition to performing solo work. i've also done street performance downtown and in various malls.">
 
-  <img class="lip" id="lip" src="./img/lipsum.png" alt="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam varius lacinia est quis faucibus. Curabitur imperdiet, erat vitae aliquam vehicula, tortor libero tempor felis, ut elementum nunc nulla eget turpis.">
+  <img class="lip" id="lip" src="./img/lipsum.png" alt="I do enjoy performing classical music, but I 
+have been known to rip through a guitar solo or indulge in back-to-back pop songs. If there's a song you want to hear, I'll be able to figure out how to play it. :)">
+
+  <img class="lip" id="lip2" src="./img/lipsum2.png" alt="I do enjoy performing classical music, but I 
+have been known to rip through a guitar solo or indulge in back-to-back pop songs. If there's a song you want to hear, I'll be able to figure out how to play it. :)">
 
 
 
@@ -64,18 +69,50 @@
 <img class="bar" id="bar" src="./img/barrier.png" alt="">
 <img class="bar" id="bar2" src="./img/barrier.png" alt="">
 
+<img class="life" id="test" src="./img/test.png" alt="">
+<img class="life" id="life" src="./img/life.png" alt="">
+<img class="life" id="person" src="./img/person.png" alt="">
+<img class="life" id="talen" src="./img/talen.png" alt="">
+<img class="life" id="that" src="./img/that.png" alt="">
+<img class="life" id="bro" src="./img/bro.png" alt="">
+
+<img class="life" id="almost" src="./img/almost.png" alt="">
+<img class="life" id="nice" src="./img/nice.png" alt="">
+<img class="life" id="three" src="./img/three.png" alt="">
+
+<img class="obj" id="lett" src="./img/lett.png" alt="">
+<img class="obj" id="sty" src="./img/sty.png" alt="">
+
+<img class="obj" id="slidey" src="./img/slidey.png" alt="">
+<img class="obj" id="ind" src="./img/ind.png" alt="">
+<img class="obj" id="ind2" src="./img/ind2.png" alt="">
+<img class="obj" id="brightr" src="./img/brightr.png" alt="">
+<img class="obj" id="darkr" src="./img/darkr.png" alt="">
+<img class="obj" id="brightm" src="./img/brightm.png" alt="">
+<img class="obj" id="darkm" src="./img/darkm.png" alt="">
+
+<img class="obj" id="brightl" src="./img/brightl.png" alt="">
+<img class="obj" id="darkl" src="./img/darkl.png" alt="">
+
+<img class="obj" id="L" src="./img/L.png" alt="">
+<img class="obj" id="LM" src="./img/LM.png" alt="">
+<img class="obj" id="M" src="./img/M.png" alt="">
+<img class="obj" id="RM" src="./img/RM.png" alt="">
+<img class="obj" id="R" src="./img/R.png" alt="">
+
+
 
 
 <div class="video-player">
 
-  <video class="video" id="vid" playsinline loop webkit-playsinline>
+  <video class="video" id="vid" playsinline  webkit-playsinline>
 
-    <source src="./img/hilaryPresto.mp4#t=13" type="video/mp4" />
-    <source src="./img/hilaryPresto.mp4#t=13" type="video/webm" />
+
+    <source src="./img/doggo.webm#t=3" type="video/webm" />
     <p>Your browser's too old to play the video :(</p>
 
   </video>
-
+  
   <div class="controls">
     <button class="controls__button toggleButton" alt="play the video" id="toggle">
       <img id="butt" src="./img/real play butt.png"></img>
@@ -84,10 +121,52 @@
 
 </div>
 
+<div class="video-player2">
+
+  <video class="video2" id="vid2" playsinline  loop webkit-playsinline>
+
+
+    <source src="./img/glitch.webm#t=0"   type="video/webm"  />
+    <p>Your browser's too old to play the video :(</p>
+
+  </video>
+
+  </div>
+
+  <div class="video-player3">
+
+  <video class="video3" id="vid3" playsinline webkit-playsinline>
+
+    <source src="./img/goodluck.webm#t=0,126"   type="video/webm"  />
+    <p>Your browser's too old to play the video :(</p>
+
+  </video>
+ <div class="video-player4">
+
+  <video class="video4" id="vid4" playsinline webkit-playsinline>
+
+    <source src="./img/sample.webm#t=0"   type="video/webm"  />
+    <p>Your browser's too old to play the video :(</p>
+
+  </video>
+  </div>
+
+</div>
+
+
+
+
+
+
+
+
   <div id="overlay"></div>
 
 
   <div id="overlay2"></div>
+  <div id="overlayred"></div>
+  <div id="overlaygreen"></div>
+  <div id="overlayblue"></div>
 
   
   
@@ -102,7 +181,11 @@
 <script>
 const diff = .7
 setTops()
-
+var clks = 0;
+var oneplaying = 0;
+var twoplaying = 0;
+var glitchplaying = 0;
+var threeplaying = 0;
 
 function getDocHeight() { // from j11y.io/javascript/get-document-height-cross-browser/
     var D = document;
@@ -117,23 +200,499 @@ function getDocHeight() { // from j11y.io/javascript/get-document-height-cross-b
 const video = document.querySelector(".video");
 const toggleButton = document.querySelector(".toggleButton");
 function togglePlay() {
-  if (video.paused || video.ended) {
-    video.play();
+  var ogle = video2
+ 
+  if (RPC == -2) {
+      ogle = video;
+  }
+  if (RPC == 0) {
+      ogle = video4;
+  }
+  if (RPC == 2) {
+      ogle = video3;
+  }
+
+  if (ogle.paused || ogle.ended) {
+    
+    if (RPC == -2) {
+    oneplaying = 1;
+    ogle.play();
+  }
+   
+   if (RPC == 0) {
+
+ if (video4.currentTime > 221)
+      {
+          video4.currentTime = 0;
+          
+      }
+      ogle.play();
+
+    twoplaying = 1;
+    ogle.play();
+  }
+    if (RPC == 2) {
+      if (video3.currentTime > 125)
+      {
+          video3.currentTime = 0;
+          
+      }
+      ogle.play();
+    threeplaying = 1;
+  }
+   
   } else {
-    video.pause();
+    ogle.pause();
+     if (RPC == -2) {
+    oneplaying = 0;
+  }
+    if (RPC == 2) {
+    threeplaying = 0;
+  }
   }
 }
 function updateToggleButton() {
-  document.getElementById("butt").style.visibility = 'hidden';
-  console.log('hi');
+  var ogle = video2
+ 
+  if (RPC == -2) {
+      ogle = video;
+  }
+  
+  if (RPC == 0) {
+      ogle = video4;
+  }
+
+  if (RPC == 2) {
+      ogle = video3;
+  }
+
+  if (ogle.paused || ogle.ended) {
+    document.getElementById("butt").style.visibility = 'visible'; 
+   
+  } else {
+    document.getElementById("butt").style.visibility = 'hidden'; 
+  }
+
+  if (RPC == -1) {
+    document.getElementById("butt").style.visibility = 'hidden'; 
+  }
+
+if (RPC == 1) {
+    document.getElementById("butt").style.visibility = 'hidden'; 
+  }
+  
 }
 toggleButton.addEventListener("click", togglePlay);
 video.addEventListener("click", togglePlay);
 video.addEventListener("play", updateToggleButton);
 video.addEventListener("pause", updateToggleButton);
 
+
 document.getElementById("toggle").style.visibility = 'hidden';
 document.getElementById("butt").style.visibility = 'visible';
+
+
+const video2 = document.querySelector(".video2");
+
+function togglePlay2() {
+  if (video2.paused || video2.ended) {
+    video2.play();
+  } else {
+    video2.pause();
+  }
+}
+
+video2.addEventListener("click", togglePlay2);
+
+
+
+
+function glitch() {
+  video2.play();
+}
+
+const video3 = document.querySelector(".video3");
+
+function togglePlay3() {
+  
+}
+
+video3.addEventListener("click", togglePlay);
+
+video3.addEventListener("play", updateToggleButton);
+video3.addEventListener("pause", updateToggleButton);
+
+const video4 = document.querySelector(".video4");
+
+function togglePlay4() {
+  
+}
+
+video4.addEventListener("click", togglePlay);
+
+video4.addEventListener("play", updateToggleButton);
+video4.addEventListener("pause", updateToggleButton);
+
+
+
+
+
+document.getElementById("ind2").style.opacity = 0
+document.getElementById("ind").style.opacity = 0
+var mousex = 0;
+var mousey = 0;
+var cli = 0;
+var dragging = 0;
+var RPC = -2;
+var three = .1
+var two = .1
+var one = .1
+var spos = 0;
+var audio = new Audio("./img/Crank.wav")
+audio.volume = 0.1
+
+
+w = window.innerWidth;
+  oldW = w;
+  smol = 0;
+  marge = 0;
+  big = 0;
+  if (w > 1100) {                 //if the window gets wide enough, then
+    marge = w - 1100;
+    w= 1100;                    
+    big = 1;
+  }
+  
+  if (w < 900) {                 //if the window gets narrow enough, then
+    w /= diff;                    //pretend the window is 'diff' pixels wider
+    smol = 1
+  }
+
+onmousedown = function f() {
+  clks += 1;
+  cli = 1;
+  movingParts();
+  
+}
+
+onmouseup = function g() {
+  cli = 0;
+  movingParts();
+}
+
+onmousemove = function e() {
+var oldx = mousex;
+var oldy = mousey;
+
+mousex = event.clientX;
+mousey = event.clientY;
+
+ if(Math.abs(oldx-mousex)>1 || Math.abs(oldy-mousey)>1) {
+  movingParts();
+  
+}
+}
+
+
+window.requestAnimationFrame(testing);
+
+function testing() {
+  realMoving();
+  window.requestAnimationFrame(testing);
+}
+
+function realMoving() {
+  if (video3.currentTime > 125.5) {
+    video3.pause();
+    video3.currentTime = 125.5;
+
+  }
+if (video4.currentTime > 221.7) {
+    video4.pause();
+    video4.currentTime = 221.7;
+
+  }
+
+  updateToggleButton();
+  if (video.paused || video.ended) {oneplaying = 0;}
+  if (video4.paused || video4.ended) {twoplaying = 0;}
+  if (video3.paused || video3.ended) {threeplaying = 0;}
+
+  spos += ((RPC*0.044)-spos)/4;
+  document.getElementById("L").style.left = (w*(.161+spos) + (marge / 2)) + 'px';
+  document.getElementById("LM").style.left = (w*(.161+spos) + (marge / 2)) + 'px';
+  document.getElementById("M").style.left = (w*(.161+spos) + (marge / 2)) + 'px';
+  document.getElementById("RM").style.left = (w*(.161+spos) + (marge / 2)) + 'px';
+  document.getElementById("R").style.left = (w*(.161+spos) + (marge / 2)) + 'px';
+  rspos = .21 + spos;
+
+var mx = rspos;
+  if (mx < .16 && mx > .06){
+    document.getElementById("L").style.opacity = 1;
+    document.getElementById("vid").style.opacity = 1;
+    document.getElementById("LM").style.opacity = 0;
+    document.getElementById("vid2").style.opacity = 0;
+    document.getElementById("M").style.opacity = 0;
+    document.getElementById("RM").style.opacity = 0;
+    document.getElementById("R").style.opacity = 0;
+    document.getElementById("vid3").style.opacity = 0;
+    document.getElementById("vid4").style.opacity = 0;
+
+    twoplaying = 0;
+    threeplaying = 0;
+    
+  }
+  if (mx > .16 && mx < .20){
+      document.getElementById("L").style.opacity = 0;
+      document.getElementById("vid").style.opacity = 0;
+      oneplaying = 1;
+    document.getElementById("LM").style.opacity = 1;
+    document.getElementById("vid2").style.opacity = 1;
+    twoplaying = 1;
+    document.getElementById("M").style.opacity = 0;
+    document.getElementById("RM").style.opacity = 0;
+    document.getElementById("R").style.opacity = 0;
+    document.getElementById("vid3").style.opacity = 0;
+    document.getElementById("vid4").style.opacity = 0;
+  }
+  if (mx > .20 && mx < .24){
+      document.getElementById("L").style.opacity = 0;
+      document.getElementById("vid").style.opacity = 0;
+    document.getElementById("LM").style.opacity = 0;
+        document.getElementById("vid2").style.opacity = 0;
+        
+    document.getElementById("M").style.opacity = 1;
+    document.getElementById("vid4").style.opacity = 1;
+
+    document.getElementById("RM").style.opacity = 0;
+    document.getElementById("R").style.opacity = 0;
+    
+    document.getElementById("vid3").style.opacity = 0;
+
+    oneplaying = 0;
+    threeplaying = 0;
+
+  }
+    if (mx > .24 && mx < .28){
+    document.getElementById("L").style.opacity = 0;
+    document.getElementById("vid").style.opacity = 0;
+    document.getElementById("LM").style.opacity = 0;
+    document.getElementById("M").style.opacity = 0;
+    document.getElementById("RM").style.opacity = 1;
+    document.getElementById("vid2").style.opacity = 1;
+    document.getElementById("R").style.opacity = 0;
+    document.getElementById("vid3").style.opacity = 0;
+    document.getElementById("vid4").style.opacity = 0;
+    twoplaying = 1;
+    threeplaying = 1;
+  }
+     if (mx > .28 && mx < .37){
+    document.getElementById("L").style.opacity = 0;
+    document.getElementById("vid").style.opacity = 0;
+    document.getElementById("LM").style.opacity = 0;
+    document.getElementById("M").style.opacity = 0;
+    document.getElementById("RM").style.opacity = 0;
+        document.getElementById("vid2").style.opacity = 0;
+    document.getElementById("R").style.opacity = 1;
+    document.getElementById("vid3").style.opacity = 1;
+    document.getElementById("vid4").style.opacity = 0;
+    oneplaying = 0;
+    twoplaying = 0;
+  }
+
+
+
+  audio.volume = Math.min(1, Math.abs(((RPC*0.044)-spos)*100))
+  if (audio.volume > 0.1) {
+    
+    if (clks > 0) {
+      audio.play(); 
+    }
+    
+    
+  }
+if (audio.volume < 0.1) {
+    audio.pause();
+  }
+
+var as = 6
+  if (RPC==2) {
+    three += (1-three)/as;
+    two += (0-two)/as;
+    one += (0-one)/as;
+  } 
+
+   if (RPC==1) {
+    three += ((.1 + (Math.random())-three)/as);
+    two += ((.1 + (Math.random())-two)/as);
+    one += (0-one)/as;
+  } 
+
+  if (RPC==0){
+    one += (0-one)/as;
+    two += (.8-two)/as;
+    three += (0-three)/as;
+  } 
+if (RPC==-1){
+    one += ((.1 + (Math.random())-one)/as) ;
+    two += ((.1 + (Math.random())-two)/as);
+    three += (0-three)/as;
+  } 
+
+  if (RPC==-2){
+    one += (1-one)/as;
+    two += (0-two)/as;
+    three += (0-three)/as;
+
+  } 
+
+  document.getElementById("brightr").style.opacity = three;
+  document.getElementById("overlaygreen").style.opacity = three - threeplaying*(.5 -Math.random());
+  document.getElementById("brightm").style.opacity = two;
+  document.getElementById("overlayblue").style.opacity = two - twoplaying*(.5 - Math.random());
+  document.getElementById("brightl").style.opacity = one;
+  document.getElementById("overlayred").style.opacity = one - oneplaying*(.5 - Math.random());
+}
+
+function movingParts() {
+  w = window.innerWidth;
+  oldW = w;
+  smol = 0;
+  marge = 0;
+  big = 0;
+  if (w > 1100) {                 //if the window gets wide enough, then
+    marge = w - 1100;
+    w= 1100;                    
+    big = 1;
+  }
+  
+  if (w < 900) {                 //if the window gets narrow enough, then
+    w /= diff;                    //pretend the window is 'diff' pixels wider
+    smol = 1
+  }
+
+
+var mx = ((mousex -(marge/2))/w);
+var my = ((mousey+document.documentElement.scrollTop)/w);
+
+if (smol==0) {
+  if (my > 1.00 && my < 1.08){
+  if (mx < .37 && mx > .06){
+    //document.body.style.cursor = 'pointer';
+  
+  }} 
+if (my > 1.00 && my < 1.08 && cli==1){
+  dragging = 1;
+  
+  } 
+}
+
+if (smol==1) {
+    if (my > 1.19 && my < 1.27 && cli==1){
+  dragging = 1;
+  }
+}
+
+
+
+
+
+if (cli==0){
+dragging = 0;
+
+}
+
+
+if (dragging==1) {
+  //document.body.style.cursor = 'pointer';
+  glitch();
+  var ogle = video2
+ 
+  if (RPC == -2) {
+      ogle = video;
+  }
+  if (RPC == 0) {
+      ogle = video4;
+  }
+
+  if (RPC == 2) {
+      ogle = video3;
+  }
+  ogle.pause();
+    glitch();
+  updateToggleButton();
+  if (mx < .16 && mx > .06){
+    RPC = -2;
+    console.log(RPC);
+  }
+  if (mx > .17 && mx < .20){
+    RPC = -1;
+    console.log(RPC);
+  }
+  if (mx > .20 && mx < .24){
+    RPC = 0;
+    console.log(RPC);
+
+  }
+    if (mx > .24 && mx < .28){
+    RPC = 1;
+    console.log(RPC);
+  }
+     if (mx > .28 && mx < .37){
+    RPC = 2;
+    console.log(RPC);}
+
+}
+
+
+  document.getElementById("ind").style.width = w*0.02 + 'px';   
+  document.getElementById("ind").style.left = Math.min(Math.max(mx, 0.13), .30)*w + (marge / 2) + 'px';
+  document.getElementById("ind").style.top = w*1.04 + 'px'; 
+  document.getElementById("ind").style.right = "";
+document.getElementById("ind").style.zIndex = 8  //lorem ipsum
+document.getElementById("ind").style.opacity = 0   //lorem ipsum
+
+  document.getElementById("ind2").style.width = w*0.02 + 'px';   
+  document.getElementById("ind2").style.top = w*1.04 + 'px'; 
+  document.getElementById("ind2").style.right = "";
+document.getElementById("ind2").style.zIndex = 8   //lorem ipsum
+document.getElementById("ind2").style.opacity = 0
+
+
+
+
+  if (smol==1) {
+  document.getElementById("ind").style.top = w*1.24 + 'px'; 
+  document.getElementById("ind2").style.top = w*1.24 + 'px'; 
+}
+  
+  //document.getElementById("slidey").style.width = w*0.21229339 + 'px';   //lorem ipsum
+  //document.getElementById("slidey").style.left = w*.12 + (marge / 2) + 'px';
+  //document.getElementById("slidey").style.top = w*1.03 + 'px'; 
+  //document.getElementById("slidey").style.right = "";
+  //document.getElementById("slidey").style.zIndex = 6
+
+
+  
+
+// if (smol==1) {
+ // document.getElementById("slidey").style.top = w*1.23 + 'px'; 
+
+//}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 function setTops() {
   w = window.innerWidth;
@@ -142,10 +701,10 @@ function setTops() {
   marge = 0;
   big = 0;
   console.log("Page height:",getDocHeight());
-  if (w > 1600) {                 //if the window gets wide enough, then
-    marge = w - 1600;
+  if (w > 1100) {                 //if the window gets wide enough, then
+    marge = w - 1100;
   
-    w= 1600;                    //pretend the window is 'diff' pixels narrower
+    w= 1100;                    
     big = 1;
   }
   
@@ -155,6 +714,13 @@ function setTops() {
     w /= diff;                    //pretend the window is 'diff' pixels wider
     smol = 1
   }
+  document.getElementById("ind2").style.width = w*0.02 + 'px';   
+  document.getElementById("ind2").style.top = w*1.04 + 'px'; 
+  document.getElementById("ind2").style.right = "";
+  document.getElementById("ind2").style.zIndex = 4   //lorem ipsum
+  document.getElementById("ind2").style.opacity = 0
+
+
   document.getElementById("violin").style.width = w*.60 + 'px'; //violin drawing
   document.getElementById("violin").style.right = (marge / 2) + 'px';
   document.getElementById("violin").style.top = 0 + 'px';
@@ -245,13 +811,213 @@ document.getElementById("hq2").style.width = w*.33 + 'px';   //high-quality viol
   document.getElementById("lip").style.right = w*.04 + (marge / 2) + 'px';
   document.getElementById("lip").style.top = w*.77 + 'px'; 
   document.getElementById("lip").style.left = "";
+    document.getElementById("lip").style.opacity = 1;
+
+    document.getElementById("lip2").style.width = w*.4609375 + 'px';   //lorem ipsum
+  document.getElementById("lip2").style.right = w*.04 + (marge / 2) + 'px';
+  document.getElementById("lip2").style.top = w*.77 + 'px'; 
+  document.getElementById("lip2").style.left = "";
+  document.getElementById("lip2").style.opacity = 0;
+
+  document.getElementById("brightr").style.width = w*0.18051576 + 'px';   //lorem ipsum
+  document.getElementById("brightr").style.left = w*.22 + (marge / 2) + 'px';
+  document.getElementById("brightr").style.top = w*1 + 'px'; 
+  document.getElementById("brightr").style.right = "";
+  document.getElementById("brightr").style.zIndex = 10  
+
+  document.getElementById("brightm").style.width = w*0.26 + 'px';   //lorem ipsum
+  document.getElementById("brightm").style.left = w*.098 + (marge / 2) + 'px';
+  document.getElementById("brightm").style.top = w*.960 + 'px'; 
+  document.getElementById("brightm").style.right = "";
+  document.getElementById("brightm").style.zIndex = 10  
+
+  document.getElementById("brightl").style.width = w*0.22 + 'px';   //lorem ipsum
+  document.getElementById("brightl").style.left = w*.034 + (marge / 2) + 'px';
+  document.getElementById("brightl").style.top = w*.98 + 'px'; 
+  document.getElementById("brightl").style.right = "";
+  document.getElementById("brightl").style.zIndex = 10  
+
+
+  document.getElementById("darkr").style.width = w*0.035 + 'px';   //lorem ipsum
+  document.getElementById("darkr").style.left = w*.294 + (marge / 2) + 'px';
+  document.getElementById("darkr").style.top = w*1.07 + 'px'; 
+  document.getElementById("darkr").style.right = "";
+  document.getElementById("darkr").style.zIndex = 9;
+
+  document.getElementById("darkm").style.width = w*0.024 + 'px';   //lorem ipsum
+  document.getElementById("darkm").style.left = w*.216 + (marge / 2) + 'px';
+  document.getElementById("darkm").style.top = w*1.076 + 'px'; 
+  document.getElementById("darkm").style.right = "";
+  document.getElementById("darkm").style.zIndex = 9;
+
+  document.getElementById("darkl").style.width = w*0.038 + 'px';   //lorem ipsum
+  document.getElementById("darkl").style.left = w*.125 + (marge / 2) + 'px';
+  document.getElementById("darkl").style.top = w*1.071 + 'px'; 
+  document.getElementById("darkl").style.right = "";
+  document.getElementById("darkl").style.zIndex = 9;
+
+  document.getElementById("slidey").style.width = w*0.21229339 + 'px';   //lorem ipsum
+  document.getElementById("slidey").style.left = w*.12 + (marge / 2) + 'px';
+  document.getElementById("slidey").style.top = w*1.03 + 'px'; 
+  document.getElementById("slidey").style.right = "";
+  document.getElementById("slidey").style.zIndex = 6;
+
+  document.getElementById("lett").style.width = w*0.20 + 'px';   //lorem ipsum
+  document.getElementById("lett").style.left = w*.125 + (marge / 2) + 'px';
+  document.getElementById("lett").style.top = w*1.015 + 'px'; 
+
+  document.getElementById("sty").style.width = w*0.3 + 'px';   //lorem ipsum
+  document.getElementById("sty").style.left = w*.09 + (marge / 2) + 'px';
+  document.getElementById("sty").style.top = w*.94 + 'px'; 
   
 
 
+  document.getElementById("L").style.width = w*0.13 + 'px';   
+  document.getElementById("L").style.top = w*.99 + 'px'; 
+  document.getElementById("L").style.right = "";
+  document.getElementById("L").style.zIndex = 9   //lorem ipsum
+  document.getElementById("L").style.opacity = 1
+
+  document.getElementById("LM").style.width = w*0.13 + 'px';   
+  document.getElementById("LM").style.top = w*.99 + 'px'; 
+  document.getElementById("LM").style.right = "";
+  document.getElementById("LM").style.zIndex = 9   //lorem ipsum
+  document.getElementById("LM").style.opacity = 1
+
+  document.getElementById("M").style.width = w*0.13 + 'px';   
+  document.getElementById("M").style.top = w*.99 + 'px'; 
+  document.getElementById("M").style.right = "";
+  document.getElementById("M").style.zIndex = 9   //lorem ipsum
+  document.getElementById("M").style.opacity = 1
+
+  document.getElementById("RM").style.width = w*0.13 + 'px';   
+  document.getElementById("RM").style.top = w*.99 + 'px'; 
+  document.getElementById("RM").style.right = "";
+  document.getElementById("RM").style.zIndex = 9   //lorem ipsum
+  document.getElementById("RM").style.opacity = 1
+
+  document.getElementById("R").style.width = w*0.13 + 'px';   
+  document.getElementById("R").style.top = w*.99 + 'px'; 
+  document.getElementById("R").style.right = "";
+  document.getElementById("R").style.zIndex = 9   //lorem ipsum
+  document.getElementById("R").style.opacity = 1
+
+
+
+if (smol==1) {
+  document.getElementById("slidey").style.left = w*.12 + (marge / 2) + 'px';
+  document.getElementById("slidey").style.top = w*1.23 + 'px'; 
+  
+  
+  document.getElementById("lett").style.top = w*1.215 + 'px'; 
+document.getElementById("sty").style.width = w*0.24 + 'px';   //lorem ipsum
+  document.getElementById("sty").style.left = w*.105 + (marge / 2) + 'px';
+    document.getElementById("sty").style.top = w*1.17 + 'px'; 
+
+    document.getElementById("brightr").style.left = w*.23 + (marge / 2) + 'px';
+    document.getElementById("brightr").style.top = w*1.2 + 'px'; 
+
+    document.getElementById("brightm").style.top = w*1.160 + 'px';
+
+    document.getElementById("brightl").style.top = w*1.180 + 'px';
+
+
+    document.getElementById("darkr").style.left = w*.303 + (marge / 2) + 'px';
+    document.getElementById("darkr").style.top = w*1.273 + 'px'; 
+
+    document.getElementById("darkm").style.top = w*1.276 + 'px'; 
+
+    document.getElementById("darkl").style.top = w*1.271 + 'px'; 
+
+    document.getElementById("L").style.top = w*1.19 + 'px'; 
+    document.getElementById("LM").style.top = w*1.19 + 'px'; 
+    document.getElementById("M").style.top = w*1.19 + 'px'; 
+    document.getElementById("RM").style.top = w*1.19 + 'px'; 
+    document.getElementById("R").style.top = w*1.19 + 'px'; 
+}
+
+
+  
+document.getElementById("ind2").style.left = 219 + 'px';
+
+  if (smol==1) {
+  document.getElementById("ind").style.top = w*1.24 + 'px'; 
+  document.getElementById("ind2").style.top = w*1.24 + 'px'; 
+}
+  document.getElementById("test").style.width = w*0.28770661 + 'px';   //lorem ipsum
+  document.getElementById("test").style.left = w*.36286157 + (marge / 2) + 'px';
+  document.getElementById("test").style.top = w*1.1 + 'px'; 
+  document.getElementById("test").style.right = "";
+
+  document.getElementById("life").style.width = w*.27427686 + 'px';   //lorem ipsum
+  document.getElementById("life").style.left = w*.36286157 + (marge / 2) + 'px';
+  document.getElementById("life").style.top = w*1.2 + 'px'; 
+  document.getElementById("life").style.right = "";
+  
+  document.getElementById("person").style.width = w*.25929752 + 'px';   //lorem ipsum
+  document.getElementById("person").style.left = w*.36286157 + (marge / 2) + 'px';
+  document.getElementById("person").style.top = w*1.3 + 'px'; 
+  document.getElementById("person").style.right = "";
+
+  document.getElementById("talen").style.width = w*.27066116 + 'px';   //lorem ipsum
+  document.getElementById("talen").style.left = w*.36286157 + (marge / 2) + 'px';
+  document.getElementById("talen").style.top = w*1.45 + 'px'; 
+  document.getElementById("talen").style.right = "";
+
+
+  document.getElementById("that").style.width = w*0.24969008 + 'px';   //lorem ipsum
+  document.getElementById("that").style.left = w*.06+ (marge / 2) + 'px';
+  document.getElementById("that").style.top = w*1.2 + 'px'; 
+  document.getElementById("that").style.right = "";
+
+  document.getElementById("bro").style.width = w*0.2 + 'px';   //lorem ipsum
+  document.getElementById("bro").style.left = w*.06+ (marge / 2) + 'px';
+  document.getElementById("bro").style.top = w*1.37 + 'px'; 
+  document.getElementById("bro").style.right = "";
+
+
+  document.getElementById("almost").style.width = w*0.26 + 'px';   //lorem ipsum
+  document.getElementById("almost").style.left = w*.70+ (marge / 2) + 'px';
+  document.getElementById("almost").style.top = w*1.2 + 'px'; 
+  document.getElementById("almost").style.right = "";
+
+  document.getElementById("nice").style.width = w*0.26497934 + 'px';   //lorem ipsum
+  document.getElementById("nice").style.left = w*.70+ (marge / 2) + 'px';
+  document.getElementById("nice").style.top = w*1.33 + 'px'; 
+  document.getElementById("nice").style.right = "";
+
+  document.getElementById("three").style.width = w*0.24380165 + 'px';   //lorem ipsum
+  document.getElementById("three").style.left = w*.70+ (marge / 2) + 'px';
+  document.getElementById("three").style.top = w*1.45 + 'px'; 
+  document.getElementById("three").style.right = "";
 
 document.getElementById("vid").style.left = w*.015 + (marge / 2) + 'px';  //video
 document.getElementById("vid").style.width = w*.44 + 'px';
 document.getElementById("vid").style.top = w*.65 + 'px';
+
+document.getElementById("vid2").style.left = w*.015 + (marge / 2) + 'px';  //video
+document.getElementById("vid2").style.width = w*.44 + 'px';
+document.getElementById("vid2").style.top = w*.65 + 'px';
+
+document.getElementById("vid3").style.left = w*.015 + (marge / 2) + 'px';  //video
+document.getElementById("vid3").style.width = w*.44 + 'px';
+document.getElementById("vid3").style.top = w*.65 + 'px';
+document.getElementById("vid4").style.left = w*.015 + (marge / 2) + 'px';  //video
+document.getElementById("vid4").style.width = w*.44 + 'px';
+document.getElementById("vid4").style.top = w*.65 + 'px';
+
+document.getElementById("overlayred").style.left = w*.015 + (marge / 2) + 'px';  //video
+document.getElementById("overlayred").style.width = w*.43 + 'px';
+document.getElementById("overlayred").style.top = w*.65 + 'px';
+document.getElementById("overlayred").style.height = w*.3 + 'px';
+document.getElementById("overlaygreen").style.left = w*.015 + (marge / 2) + 'px';  //video
+document.getElementById("overlaygreen").style.width = w*.43 + 'px';
+document.getElementById("overlaygreen").style.top = w*.65 + 'px';
+document.getElementById("overlaygreen").style.height = w*.3 + 'px';
+document.getElementById("overlayblue").style.left = w*.015 + (marge / 2) + 'px';  //video
+document.getElementById("overlayblue").style.width = w*.43 + 'px';
+document.getElementById("overlayblue").style.top = w*.65 + 'px';
+document.getElementById("overlayblue").style.height = w*.3 + 'px';
 
 document.getElementById("bar").style.height = document.getElementById("vid").offsetHeight + 5 + 'px';
 document.getElementById("bar").style.top = w*.665 + 'px'; 
@@ -266,10 +1032,14 @@ document.getElementById("toggle").style.left = w*.23 + (marge / 2) + 'px';
 document.getElementById("toggle").style.width = w*.07993967 + 'px';
 document.getElementById("toggle").style.height = w*.07993967 + 'px';
 
+
+
 document.getElementById("butt").style.width = w*.07993967 + 'px';
 document.getElementById("butt").style.height = w*.07993967 + 'px';
 document.getElementById("butt").style.top = 0 + 'px';
 document.getElementById("butt").style.left = 0 + 'px';
+
+
 
 document.getElementById("grv").style.top = w*.58571644 + 'px';
 document.getElementById("grv").style.left= (marge / 2) + 'px';
@@ -311,7 +1081,51 @@ document.getElementById("grv").style.height = w*.34087481 + 'px';
     document.getElementById("lip").style.top = w*.770 + 'px';
     document.getElementById("lip").style.left = w*.02 + 'px';
     document.getElementById("lip").style.width = w*.55097365*diff + 'px';
+    document.getElementById("lip").style.opacity =0;
+
+    document.getElementById("lip2").style.opacity =1;
+     document.getElementById("lip2").style.top = w*.765 + 'px';
+    document.getElementById("lip2").style.left = w*.02 + 'px';
+    document.getElementById("lip2").style.width = w*.95*diff + 'px';
     
+
+document.getElementById("bar").style.top = w*.92 + 'px'; 
+document.getElementById("bar").style.left = w*.44 + (marge / 2) + 'px'; 
+document.getElementById("bar2").style.height = document.getElementById("vid").offsetHeight + 5 + 'px';
+document.getElementById("bar2").style.top = w*.92 + 'px'; 
+document.getElementById("bar2").style.left = (marge / 2) + 'px'; 
+
+  document.getElementById("nice").style.left = w*.38  + 'px';
+  document.getElementById("nice").style.top = w*1.78 + 'px'; 
+
+
+
+  document.getElementById("bro").style.left = w*.38  + 'px';
+  document.getElementById("bro").style.top = w*1.58 + 'px'; 
+
+  document.getElementById("that").style.left = w*.38  + 'px';
+  document.getElementById("that").style.top = w*1.4 + 'px'; 
+
+
+  document.getElementById("test").style.left = w*.2  + 'px';
+  document.getElementById("test").style.top = w*1.3 + 'px'; 
+
+  document.getElementById("life").style.left = w*.06  + 'px';
+  document.getElementById("life").style.top = w*1.4 + 'px'; 
+
+  document.getElementById("person").style.left = w*.06  + 'px';
+  document.getElementById("person").style.top = w*1.5 + 'px'; 
+
+  document.getElementById("talen").style.left = w*.06  + 'px';
+  document.getElementById("talen").style.top = w*1.65 + 'px'; 
+
+  document.getElementById("almost").style.left = w*.06  + 'px';
+  document.getElementById("almost").style.top = w*1.78 + 'px'; 
+
+
+  document.getElementById("three").style.left = w*.06+ (marge / 2) + 'px';
+  document.getElementById("three").style.top = w*1.9 + 'px'; 
+
 
     document.getElementById("amoore").style.top = w*.1 + 'px';         //re-position axel moore-mccabe
     document.getElementById("amoore2").style.top = w*.075 + 'px'; 
@@ -320,12 +1134,33 @@ document.getElementById("grv").style.height = w*.34087481 + 'px';
     document.getElementById("hq2").style.top = w*.150 + 'px';               //it do be that way tho
 
 
-document.getElementById("vid").style.left = w*.125 + (marge / 2) + 'px';  // re-position the video
-document.getElementById("vid").style.top = w*.855 + 'px';
+document.getElementById("vid").style.left = (marge / 2) + 'px';  // re-position the video
+document.getElementById("vid").style.top = w*.895 + 'px';
 document.getElementById("vid").style.width = w*.45173454 + 'px';
-document.getElementById("toggle").style.left = w*.315 + (marge / 2) + 'px';
-document.getElementById("toggle").style.top = w*.88 + 'px';
+document.getElementById("vid2").style.left = (marge / 2) + 'px';  // re-position the video
+document.getElementById("vid2").style.top = w*.895 + 'px';
+document.getElementById("vid2").style.width = w*.45173454 + 'px';
+document.getElementById("vid3").style.left = (marge / 2) + 'px';  // re-position the video
+document.getElementById("vid3").style.top = w*.895 + 'px';
+document.getElementById("vid3").style.width = w*.45173454 + 'px';
+document.getElementById("vid4").style.left = (marge / 2) + 'px';  // re-position the video
+document.getElementById("vid4").style.top = w*.895 + 'px';
+document.getElementById("vid4").style.width = w*.45173454 + 'px';
+document.getElementById("toggle").style.left = w*.205 + (marge / 2) + 'px';
+document.getElementById("toggle").style.top = w*.98 + 'px';
 
+
+document.getElementById("overlayred").style.left = w*.01 + (marge / 2) + 'px';  // re-position the video
+document.getElementById("overlayred").style.top = w*.895 + 'px';
+document.getElementById("overlayred").style.width = w*.43173454 + 'px';
+
+document.getElementById("overlaygreen").style.left = w*.01 + (marge / 2) + 'px';  // re-position the video
+document.getElementById("overlaygreen").style.top = w*.895 + 'px';
+document.getElementById("overlaygreen").style.width = w*.43173454 + 'px';
+
+document.getElementById("overlayblue").style.left = w*.01 + (marge / 2) + 'px';  // re-position the video
+document.getElementById("overlayblue").style.top = w*.895 + 'px';
+document.getElementById("overlayblue").style.width = w*.43173454 + 'px';
 
 document.getElementById("grv").style.left= w*.1 + 'px';
 document.getElementById("grv").style.top = w*.85071644 + 'px';
@@ -336,18 +1171,31 @@ document.getElementById("soco").style.top = w*.06 + 'px'; // re-position the soc
 
 }
 
+
+var scrolled = document.documentElement.scrollTop
 setTimeout(setTops, 30);
+//setTimeout(glitch, 300);
+
+
 
 
 window.addEventListener('resize', function(event){
 document.getElementById("overlay2").style.height = 150 + 'px';
 setTops();
+movingParts();
+setTimeout(setTops, 50);
+setTimeout(movingParts, 50);
+video2.play();
 });
 
 window.addEventListener("orientationchange", function() {
   document.getElementById("overlay2").style.height = 150 + 'px';
 setTops();
+movingParts();
 setTimeout(setTops, 30);
+setTimeout(movingParts, 30);
+video2.play();
+
 }, false);
 
 

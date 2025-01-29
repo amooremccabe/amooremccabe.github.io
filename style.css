@@ -1,6 +1,7 @@
 html, body {
     max-width: 100%;
     overflow-x: hidden;
+    cursor: default;
 }
 
 body {
@@ -16,6 +17,10 @@ h1.source-serif-4 {
   font-weight: 500;
   font-style: normal;
 }
+div.bod{
+  width: 100%;
+
+}
 
 img.violin {
 	display: block;
@@ -29,6 +34,60 @@ img.violin {
     filter: brightness(calc(100% + var(--threshold))) grayscale(100%) contrast(1000%);
 }
 
+img.life {
+  display: block;
+  position: absolute;
+  left: 36.286157%;
+  width: 27.427686%;
+  top: 95%;
+  height: auto; 
+  z-index: 4;
+  pointer-events: none;
+}
+
+
+img.obj {
+  display: block;
+  position: absolute;
+  left: 36.286157%;
+  width: 27.427686%;
+  top: 85%;
+  height: auto; 
+  z-index: 4;
+  
+  
+
+}
+
+img#brightl.obj  {
+  pointer-events: none;
+}
+img#brightm.obj  {
+  pointer-events: none;
+}
+img#brightr.obj  {
+  pointer-events: none;
+}
+
+img#slidey.obj  {
+  cursor: pointer;
+}
+
+img#R.obj  {
+  cursor: pointer;
+}
+img#RM.obj  {
+  cursor: pointer;
+}
+img#M.obj  {
+  cursor: pointer;
+}
+img#LM.obj  {
+  cursor: pointer;
+}
+img#L.obj  {
+  cursor: pointer;
+}
 img.amoore {
 	display: block;
 	position: absolute;
@@ -41,6 +100,7 @@ img.amoore {
 
 img.soco {
   display: block;
+  cursor: pointer !important; 
   position: absolute;
 }
 img.bar {
@@ -140,7 +200,7 @@ img.lip {
     right: 2.0%;
     width: 48.802083%;
     height: auto; 
-	z-index: 1;
+	z-index: 3;
 }
 
 img.fvl {
@@ -228,7 +288,7 @@ img.ev2 {
 }
 img.ev2:hover {
 	opacity: 1;
-	cursor: pointer;scale: ;
+	cursor: pointer; 
 }
 
 
@@ -247,20 +307,68 @@ video.video {
     left: 2.5%;
     z-index: -1;
     top: 30%;
+opacity: 1;
   filter: brightness(calc(100% + var(--threshold2))) grayscale(100%) contrast(1000%);
+}
+video.video2 {
+  display: block;
+  position: absolute;
+    left: 2.5%;
+    z-index: -1;
+    top: 30%;
+opacity: 0;
+  filter: brightness(calc(100% + var(--threshold2))) grayscale(100%) contrast(1000%);
+
+}
+
+video.video3 {
+  display: block;
+  position: absolute;
+    left: 2.5%;
+    z-index: -1;
+    top: 30%;
+opacity: 0;
+  filter: brightness(calc(100% + var(--threshold2))) grayscale(100%) contrast(1000%);
+  
+}
+
+video.video4 {
+  display: block;
+  position: absolute;
+    left: 2.5%;
+    z-index: -1;
+    top: 30%;
+opacity: 0;
+  filter: brightness(calc(150% + var(--threshold2))) grayscale(100%) contrast(1000%);
+  
 }
 
 button#toggle.controls__button.toggleButton {
   display: block;
   position: absolute;
+  cursor: pointer;
    
-    z-index: 1;
+    z-index: 4;
    
 
 
 }
 
+button#toggle.controls2__button.toggleButton2 {
+  display: block;
+  position: absolute;
+  cursor: pointer;
+   
+    z-index: 4;
+   
+
+}
+
 img#butt {
+  position: absolute;
+  z-index: 4;
+} 
+img#butt2 {
   position: absolute;
   z-index: 4;
 } 
@@ -292,8 +400,9 @@ img#butt {
   right: 0;
   bottom: 0;
   background-color: #bf7d0b30; /* Black background with opacity */
-  z-index: 4; /* Specify a stack order in case you're using a different order for other elements */
+  z-index: 5; /* Specify a stack order in case you're using a different order for other elements */
   pointer-events: none;
+  opacity: 1;
 }
 
 
@@ -307,7 +416,7 @@ img#butt {
   bottom: 0;
   background-image: url(./img/white-plaster-texture.webp);
   background-repeat:repeat;
-  z-index: 5; /* Specify a stack order in case you're using a different order for other elements */
+  z-index: 6; /* Specify a stack order in case you're using a different order for other elements */
   opacity: .3;
   filter: contrast(120%);
   pointer-events: none;
@@ -327,5 +436,41 @@ img#butt {
   background-color: #ffffff; /* Black background with opacity */
   mix-blend-mode: difference;
   z-index: 6; /* Specify a stack order in case you're using a different order for other elements */
+  pointer-events: none;
+}
+
+
+#overlayred {
+  position: absolute; /* Sit on top of the page content */
+  display: block; /* Hidden by default */
+  
+  height: 35%; /* Full height (cover the whole page) */
+  mix-blend-mode: screen;
+  background-color: #932121; /* Black background with opacity */
+  
+  z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+  pointer-events: none;
+}
+
+#overlayblue {
+  position: absolute; /* Sit on top of the page content */
+  display: block; /* Hidden by default */
+  
+  height: 35%; /* Full height (cover the whole page) */
+  mix-blend-mode: screen;
+  background-color: #2A2193; /* Black background with opacity */
+  
+  z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+  pointer-events: none;
+}
+#overlaygreen {
+  position: absolute; /* Sit on top of the page content */
+  display: block; /* Hidden by default */
+  
+  height: 35%; /* Full height (cover the whole page) */
+  mix-blend-mode: screen;
+  background-color: #2C6627; /* Black background with opacity */
+  
+  z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
   pointer-events: none;
 }
