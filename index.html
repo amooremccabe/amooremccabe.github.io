@@ -248,15 +248,65 @@ if (video.currentTime > 79)
   }
    
   } else {
-    ogle.pause();
+    
      if (RPC == -2) {
     oneplaying = 0;
+ogle.pause();
   }
     if (RPC == 2) {
     threeplaying = 0;
+ogle.pause();
+  }
+
+if (RPC == 0) {
+    twoplaying = 0;
+ogle.pause();
   }
   }
 }
+
+
+
+function seek(n) {
+togglePlay();
+  var ogle = video;
+ 
+  if (RPC == -2) {
+      ogle = video;
+  }
+  if (RPC == 0) {
+      ogle = video4;
+  }
+  if (RPC == 2) {
+      ogle = video3;
+  }
+ 
+ogle.currentTime += n;
+togglePlay();
+
+}
+
+
+function veek(n) {
+
+  var ogle = video;
+ 
+  if (RPC == -2) {
+      ogle = video;
+  }
+  if (RPC == 0) {
+      ogle = video4;
+  }
+  if (RPC == 2) {
+      ogle = video3;
+  }
+ 
+ogle.volume += n;
+
+}
+
+
+
 function updateToggleButton() {
   var ogle = video2
  
@@ -1214,6 +1264,22 @@ window.addEventListener('keydown', function(e) {
   if(e.keyCode == 32 && e.target == document.body) {
     e.preventDefault();
 togglePlay();
+  }
+if(e.keyCode == 37 && e.target == document.body) {
+    e.preventDefault();
+seek(-5);
+  }
+if(e.keyCode == 39 && e.target == document.body) {
+    e.preventDefault();
+seek(5);
+  }
+if(e.keyCode == 38 && e.target == document.body) {
+    e.preventDefault();
+veek(.33333);
+  }
+if(e.keyCode == 40 && e.target == document.body) {
+    e.preventDefault();
+veek(-.3333);
   }
 });
 
